@@ -113,8 +113,8 @@ for lineIndex in range(linesNumber):
 
 # 3.c
 
-columnsNumber = 7
-linesNumber = 6
+columnsNumber = 15
+linesNumber = 16
 for lineIndex in range(linesNumber):
     lign = ""
     for columnIndex in range(lineIndex, linesNumber):
@@ -144,7 +144,7 @@ if position == -1:
 else:
     print("Found at: " + str(position))
 
-# 2
+# 2 String research (inside another string)
 
 text = "This is a test string !"
 word = " !"
@@ -205,11 +205,20 @@ else:
 
 # 5
 
-n = 7
-middle = n
-for k in range(n):
-    sideSpaces = middle - k - 1
-    print(sideSpaces * "  " + "* " * (2 * k + 1) + "  " * sideSpaces)
+leafPattern = '*'
+ballPattern = '@'
+levels = 8
+for indexLine in range(2, levels, 1):
+    middle = levels
+    for indexColumn in range(indexLine):
+        sideSpaces = middle - indexColumn - 2
+        print(sideSpaces * "  " + (leafPattern + " ") * (2 * indexColumn + 1) + "  " * sideSpaces)
+    print(sideSpaces * "  " + (ballPattern + " ") + " " * (2 * (indexColumn - 1)) + leafPattern + " " * (2 * indexColumn - 1) + ballPattern + "  " * sideSpaces)
 
-levels = 4
-for n in range(levels)
+# for break else
+
+for i in range(2):
+    print("Test")
+    #break
+else:
+    print("Hello World !") # executed if break not called
