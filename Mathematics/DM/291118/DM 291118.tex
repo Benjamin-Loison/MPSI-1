@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry}
+\begin{document}
+
+	\title{\vspace{-1cm}Devoir maison pour le 29 novembre 2018}
+	\author{Benjamin Loison (MPSI 1)}
+	\date{26 novembre 2018}
+	\maketitle
+
+	\section{Exercices}
+		
+		1. Soient $E$, $F$ et $G$ trois ensembles. On considère $f \in F^E$, $g \in G^F$ et $h \in E^G$ et on suppose que $g \circ f$ et $h \circ g$ sont bijectives.\\
+		$g \circ f$ est bijective donc la fonction $g$ est surjective.\\
+		$h \circ g$ est bijective donc la fonction $g$ est injective.\\
+		Donc la fonction $g$ est bijective. Donc la fonction réciproque de $g$ existe et $g^{-1}$ est donc bijective.\\
+		On en déduit que $g^{-1} \circ g \circ f = f$, donc $f$ est bijective.\\
+		De même, $h \circ g \circ g^{-1} = h$, donc $h$ est bijective.\\\\
+		2. Soient $E$ et $F$ deux ensembles et $f \in F^E$.\\
+		On considère $A$ une partie de $E$ et $B$ une partie de $F$.\\
+		On démontre l'égalité par double inclusion\\
+		- Soit $y \in f(A \cap f^{-1}(B))$, tel que il existe x $\in A \cap f^{-1}(B)$, tel que: $y=f(x)$.\\
+		On a $x \in A$ donc $f(x) \in f(A)$.\\
+		On a $x \in f^{-1}(B)$ alors $f(x) \in B$.\\
+		Donc $f(x) \in f(A) \cap B$.\\
+		Donc $f(A \cap f^{-1}(B)) \subset f(A) \cap B$.\\
+		- Soit $y \in f(A) \cap B$\\
+		On a $y \in f(A)$ donc il existe $x \in A$, tel que: $f(x)=y$.\\
+		On a $y \in B$ donc il existe $x \in f^{-1}(B)$, tel que: $f(y)=x$.\\
+		Donc $x \in (A \cap f^{-1}(B))$.\\
+		Donc $y \in f(A \cap f^{-1}(B))$.\\
+		Donc $f(A) \cap B \subset f(A \cap f^{-1}(B))$.\\
+		- Donc $f(A \cap f^{-1}(B)) = f(A) \cap B$.\\\\
+		3. Soit $n$ $\in$ $\mathbb{N}$.\\
+		On démontre le prédicat suivant sur $\mathbb{N}$: $u_{n+3}=3u_{n+2}-3u_{n+1}+u_n$\\
+		L'initialisation est claire pour les rangs 0, 1 et 2.\\
+		On suppose le prédicat vrai aux rangs $n$, $n+1$ et $n+2$, on a alors:\\\\
+		$\left\{\begin{array}{r c l}
+		u_n &=& n(n-1)\\
+		u_{n+1} &=& (n+1)n\\
+		u_{n+2} &=& (n+2)(n+1)
+		\end{array}\right.$\\\\
+		Le prédicat est vérifié au rang $n+3$ si et seulement si: $u_{n+3}=(n+3)(n+2)=n^2+5n+6$\\\\
+		On a: $u_{n+3}=3u_{n+2}-3u_{n+1}+u_n$\\
+		D'où: $u_{n+3}=3(n+2)(n+1)-3(n+1)n+n(n-1)$\\
+		Donc: $u_{n+3}=n^2+5n+6$\\\\
+		Donc $\forall n \in \mathbb{N}$, on a: $u_n=n(n-1)$\\\\
+		4. On définit sur $\mathbb{N}$ une relation binaire $R$ par la relation: $\forall (x,y) \in \mathbb{N}^2, xRy \Leftrightarrow \exists n \in \mathbb{N}, y=x^n$.\\\\
+		- Soit $x \in \mathbb{N}$. On a $xRx \Leftrightarrow \exists n \in \mathbb{N}, x=x^n$, cette dernière proposition est claire pour $n=1$, d'où $xRx$. Donc la relation $R$ est réflexive.\\\\
+		Soient $(x,y,z) \in \mathbb{N}^3$. On a $xRy$ et $yRz \Leftrightarrow \left\{\begin{array}{r c l}
+		xRy &=& \exists n \in \mathbb{N}, y=x^n\\
+		yRz &=& \exists n \in \mathbb{N}, z=y^n
+		\end{array}\right.\Rightarrow \exists (n,n') \in \mathbb{N}^2, z=(x^n)^{n'}=x^{n*n'}$, or $n*n' \in \mathbb{N}$. Donc $xRy$ et $yRz$ implique que: $\exists n \in \mathbb{N}, z=x^n$.\\
+		Donc $xRy$ et $yRz$ implique que $xRz$. Donc la relation $R$ est transitive.\\\\
+		Soient $(x,y) \in \mathbb{N}^2$. $xRy$ et $yRz$ si et seulement si: $\left\{\begin{array}{r c l}
+		xRy &=& \exists n \in \mathbb{N}, y=x^n\\
+		yRx &=& \exists n \in \mathbb{N}, x=y^n
+		\end{array}\right.\Rightarrow x=y$\\
+		Donc $xRy$ et $yRz \Rightarrow x=y$. Donc la relation $R$ est anti-symétrique.\\\\
+		Donc la relation $R$ est une relation d'ordre.\\\\
+		- Soient $(x,y) \in \mathbb{N}^2, xRy$ ou $yRx$ ssi $(\exists n \in \mathbb{N}, y=x^n)$ ou $(\exists n \in \mathbb{N}, x=y^n)$. Cette dernière proposition est clairement fausse pour $x=5$ et $y=3$, aucune puissance entière de 5 est égale à 3. Donc la relation $R$ n'est pas une relation totale.\\\\
+		5. On considère un ensemble $E$ et $A$, $B$ deux parties de $E$.\\
+		On définit: $f=\left(\begin{array}{r c l}
+		P(E) \rightarrow P(A)$ x $P(B)\\
+		X \mapsto (A \cap X, B \cap X)
+		\end{array}\right)$\\
+
+		    a) $f(E)=(A \cap E, B \cap E)=(A,B)$
+				
+				b) - $f(A \cup B)=(A \cap (A \cup B), B \cap (A \cup B))$
+				
+				D'où: $f(A \cup B)=((A \cap A) \cup (A \cap B), (B \cap A) \cup (B \cap B))$
+				
+				D'où: $f(A \cup B)=(A \cup (A \cap B), (B \cap A) \cup B)$
+				
+				Donc: $f(A \cup B)=(A, B)$
+				
+				- On remarque que $f(A \cup B)=f(E)$ et par injectivité cela implique que $A \cup B=E$.
+		
+				c) $\star$ Soient $(X,Y) \in P(E)^2$, tel que: $f(X)=f(Y)$.
+				
+				- Soit $x \in X$. Donc $x \in A$ ou $x \in B$.
+				
+				Si $x \in A$, alors on a $x \in A \cap X=A \cap Y$, donc $x \in Y$.
+				
+				Sinon, si $x \in B$, alors on a $x \in B \cap X=B \cap Y$, donc $x \in Y$.
+				
+				Donc $X \subset Y$.
+				
+				- De la même manière on démontre l'autre sens de l'égalité:
+				
+				Soit $y \in Y$. Donc $y \in A$ ou $y \in B$.
+				
+				Si $y \in A$, alors on a $y \in A \cap Y=A \cap X$, donc $y \in X$.
+				
+				Sinon, si $y \in B$, alors on a $y \in B \cap Y=B \cap X$, donc $y \in X$.
+				
+				Donc $Y \subset X$.
+				
+				- Donc finalement $X=Y$. D'où l'injectivité.
+				
+				$\star$ - Si la fonction $f$ est surjective, l'image $(A,B)$ admet un antécédant noté $X$, tel que: $A \subset X$ et $X \cap B = \emptyset$. Ces propositions impliquent que $A \cap B = \emptyset$.
+				
+				- On vérifie cette condition:
+				
+				Si $A \cap B = \emptyset$, alors $(X,Y) \in P(A)$ x $P(B)$, tel que: $X \cup Y$ est un antécédant de $(X,Y)$.
+				
+				- Donc la condition nécessaire et suffisante recherchée est bien $A \cap B = \emptyset$ pour que $f$ soit surjective.
+				
+				d) On a finalement: $f^{-1}=\left(\begin{array}{r c l}
+		P(A)$ x $P(B) \rightarrow P(E)\\
+		(X,Y) \mapsto (X \cup Y)
+		\end{array}\right)$\\
+		
+	\section{Algèbre de Boole}
+
+		\subsection{Propriétés élémentaires}
+			
+			On considère $E$ un ensemble et $A$ une partie de $E$. On considère $A$ une algèbre de Boole.\\\\
+			1. D'après la propriété d'appartenance de l'élement nul dans l'algèbre de Boole, on a: $\emptyset \in A$.\\
+			D'après la propriété de complémentarité de l'algèbre de Boole, on a alors: $\emptyset_{E}^{C} \in A$ donc $E \in A$.\\\\
+			2. Soient $(X,Y) \in A^2$.\\
+			- $(X \cap Y)^C=X^C \cup Y^C$. Par la propriété de complémentarité de l'algèbre de Boole, on a alors $X^C \in A$ et $Y^C \in A$. Donc d'après la propriété de l'union de l'algèbre de Boole, on a $(X^C \cup Y^C) \in A$. Donc $(X \cap Y)^C \in A$ et par complémentarité de l'algèbre de Boole, on a finalement: $(X \cap Y) \in A$.\\\\
+			- Soit $x$ un objet mathématique.\\
+			$x \in (X \backslash Y)$ ssi $(x \in X)$ et $(x \in Y)$\\
+			D'où: $x \in (X \backslash Y)^C$ ssi $(x \notin X)$ ou $(x \notin Y)$ ssi $(x \in X^C)$ ou $(x \in Y^C)$, on conclue alors comme précédemment.
+			
+		%\subsection{Exemples}
+			
+			
+			
+		\subsection{Endomorphisme d'algèbre de Boole}
+			
+			On considère $A$ une algèbre de Boole sur $E$ et $f$ une application de $A$ dans $A$.\\
+			Soit $f$ un endomorphisme de $A$\\\\
+			1. - Premièrement on a: $f(E)=f(E) \cup f(\emptyset)=f(E) \cup f(E^C)=f(E) \cup f(E)^C=E$\\
+			Donc $f(E)=E$\\
+			- Deuxièmement on a $f(E^C)=f(E)^C$ d'après la propriété de complémentarité d'un endormorphisme d'algèbre de Boole.\\
+			Donc d'après ce qui précède: $f(E)^C=E^C=\emptyset$.\\
+			Donc $f(\emptyset)=\emptyset$\\\\
+			2. Soient $(X,Y) \in A^2$.\\
+			- On a: $f(X \cup Y)=f(X) \cup f(Y)$\\
+			D'où: $(f(X \cup Y))^C=(f(X) \cup f(Y))^C$\\
+			Donc: $f(X^C \cap Y^C)=f(X)^C \cap f(Y)^C$\\
+			Donc: $f(X^C \cap Y^C)=f(X^C) \cap f(Y^C)$\\
+			On pose alors $(X',Y') \in A^2$.\\
+			On remarque que l'on a alors: $f(X' \cap Y')=f(X') \cap f(Y')$. D'où l'égalité.
+			- D'une part: $f(X \backslash Y)=f(X \cap Y^C)$\\
+			D'autre part: $f(X) \backslash f(Y)=f(X) \cap f(Y^C)$\\
+			L'égalité est alors claire d'après l'égalité précédemment démontrée.\\\\
+			3. Soient $(X,Y) \in A^2$.\\
+			On suppose $X \subset Y$.
+			On a alors $X \cup Y=Y$, donc $f(X \cup Y)=f(Y)=f(X) \cup f(Y)$ et donc $f(X) \subset f(Y)$.\\
+			Donc $f$ est croissante.\\\\
+			4. - Si $f$ est injective. D'après le 1., on a: $f(\emptyset)=\emptyset$. Donc $Ker(f)= \{ X \in A | f(X)=\emptyset=f(\emptyset) \} $. Donc par injectivité de $f$, on a: On a $Ker(f)= \{ X \in A | X = \emptyset \} =\emptyset$.\\
+			- Si $Ker(f)=\emptyset$, on considère $(X,Y) \in A^2$. On suppose que $f(X)=f(Y)$. D'après le 2., on a alors: $f(X \backslash Y)=f(X) \backslash f(Y) = \emptyset$ donc d'après la relation $f(\emptyset)=\emptyset$, on en déduit que: $X \backslash Y=\emptyset$ et donc $X \subset Y$. De la même manière on prouve que $Y \subset X$. Donc $X=Y$.
+			- On en conclut que $f$ est injective ssi $Ker(f)=\emptyset$.
+			
+		%\subsection{Etude des algèbres de Boole finies}
+			
+			
+			
+	%\section{Théorème de Cantor-Bernstein}
+		
+		
+		
+\end{document}
