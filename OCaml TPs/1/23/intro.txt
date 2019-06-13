@@ -1,0 +1,4 @@
+wincaml
+jean-mourir.pagesperso-orange.fr
+OCaml et pas CamlLight cette année
+(on peut ordi perso en tp)

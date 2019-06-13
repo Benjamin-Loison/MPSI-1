@@ -1,0 +1,30 @@
+2.2 word variables locales: let a = 1 in 2 * a;; ne génère pas d'erreur
+pas compris: let double f = function x -> 2 * (f x) ;; // (‘a -> int) -> ‘a -> int
+
+bool & bool: erreur qu'un & ? TP Prise en main
+
+list: liste [1; 2; 3]
+array, vector (vecteur), tableau [|1; 2; 3|]
+
+TP 5 corrigé
+change char in string ?
+erreur:
+
+let s = "mpsi";;
+s.[0] <- 'M';;
+s;;
+
+Grand O ? $T_n$ = 0 ($\Phi^n$) \{nombre d'or\} 
+
+tp 13.2 ml ackerman
+
+nieme en quoi mieux ? 270319.ml (when n > 1)
+
+6 TP 4 not done complexité et erreur différence ?
+
+vectinter TP 2 not done (et pas dans corrigé)
+
+let div a b = 
+	if b = 0 then raise divparzero else a /. b;; (* sure ? *)
+
+tips: learn by heart several basic algorithms, such as base 2, palindrome...
