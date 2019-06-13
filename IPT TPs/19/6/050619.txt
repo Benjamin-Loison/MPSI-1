@@ -1,0 +1,46 @@
+une table avec identifiant pour chaque lycée, chaque adresse, chaque filière...
+constance dans le temps des données (mettre date de naissance, pas l'âge)
+vraie BDD: décomposer adresse en n° de rue, type de rue, ...
+
+table d'entitée
+
+camarade
+- id
+- nom
+- prénom
+- date de naissance
+- n° de rue
+- type de rue
+- nom de rue
+- CP*
+
+Insee:
+-CP
+-ville
+
+lycées: ((losange) scolarise camarade) -id - RNE - n° filière
+-rne
+- nom
+- adresse
+
+concours (losange)
+- nom_f*
+- matières*
+- coef
+
+filière:
+- nom_filière
+- matière(s)
+- coef
+
+épreuves:
+- matières
+- date épreuve
+
+JPO (losange):losange entre carré des noms des tables, relations
+- rne*
+- nom_filière*
+
+SELECT Code
+FROM depot JOIN livraison ON depot.id = livraison.id
+WHERE CP = 75006

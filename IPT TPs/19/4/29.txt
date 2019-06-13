@@ -1,0 +1,4 @@
+doit connaître les indices sur la table ascii de a à z et de A à Z et 0 à 9 ?
+-> important nombre flottant binaire
+pivot de gauss (faux zéros ? fonctionne dans TP non ?)
++ programme DS dans fichier dossier IPT

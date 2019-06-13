@@ -1,0 +1,180 @@
+convertisseur binaire - décimal (balayage envers ou désigner à l'envers)
+
+111101010111000
+EDCBA9876543210
+
+8 + 16 + 32 + 128 + 512 + 2 048 + 4 096 + 8 192 + 16 384 = 31 416
+3    4    5    7     9      B     C       D          E
+
+0 1
+1 16
+2 256
+3 4 096
+
+2744 184 8
+
+7A
+
+7 * 4096 + 256 * 10 + = 
+
+0100 0000 - 1 (128) = 0011 1111 (127)
+
+0100 0000
+
+bool ~ bit
+octet 0 - 255
+retenue ou pas: bool/bit
+
+Perso: TODO: addition binaire avec des bool
+
+6   110
++ 6 110
+12  1100
+
+#xor (ou exclusif) sans retenue
+      S R
+00 -> 0 0
+01 -> 1 0
+10 -> 1 0
+11 -> 0 1
+
+et donne la retenue
+
+code = nb à encoder + biais
+       (ou valeur)
+	   
+ex: (biais -3 -> 0 donne 3, biais 3 -> 0 donne -3) glisser l'intervalle d'un côté ou de l'autre (-3 (rep par 0) -> 252 (rep par 255))
+biais 127
+-127 0___0
+0    01__1 
++128 1___1
+
+biais 128:
+-128 0000 0000
+0    1000 0000
+127  1111 1111
+
+rajouter 128 à toute les valeurs revient à rajouter un 1 au bit de poi d fort sur un octet
+6: 110
+6: 1000 0110
+
+128 - 6
+0111 1010
+
+-6 (+128) + 6 (+128) = 1 0000 0000 (+256) /!\ != 0
+
+6 (+128) - 6 (+128) = 0 (+0)
+
+biais: 128 "plus logique"
+
+-127 1 1__1 255
+-1   - 0__1
+-0   1 0__0 128
+
++0   0 0__0 0
+     +
+127  0 1__1 127
+
+0 0__0 0
+0 1__1 127
+1 0__0 -0
+1 0__1 -0
+1 0__1 -1
+1 1__1 -127
+
+(si 1er bit vaut 1: nombre négatif)
+
+6 - 6:
+  0000 0110
+- 0000 0110
+-----------
+  0000 0000 (+0)
+  
+6 + (-6):
+
+0000 0110
+1000 0110
+---------
+1000 1100 (-12)
+
+base 10 à 3 chiffres avec biais de 500
+000 (-500)
+499 (-1)
+500 (0)
+501 (+1)
+999 (+499)
+
+complément à 1 000
+
+"-10" -> 990
+10    -> 010
+------------
+        1000
+
+000 (0)
+499 (499)
+500 (-500)
+501 (-499)
+999 (-1)
+
+-467 ? 533
+1000
+-467
+----
+ 533
+ 
+Verif:
+533 + 467 = 1000 (retenue aux oubliettes)
+
+-467 + 533 = 
+
+1789 + 8211 = 10 000 le complément à 10 000 à 1789 est 8211
+
+--
+
+-6
+1) 6: 0000 0110
+2) complément chif à chif à 1: 1111 1001
+3) +1 1111 1010 (-6)
+
+  1111 1010 (-6)
++ 0000 0110 (6)
+-----------
+  0000 0000
+  
+1111 1010 (-6)
+1111 1010 (-6)
+---------
+1111 0100 (-12)
+0000 1100 (complément à 256)
+
+(127 + 3 ça coince)
+
+répondre à exo de manière optimisé mais hors-programme avec notion déjà faite @Horner @Test de primalité, disjonction cas pour les paires
++ récursivité
+
+-> non
+
+complément à 9 + 1 @avalanche de 0
+
+1789
+8210
+= 9999
++1 = 10000
+
+200 - 300 = 200 + 700 = 900 (-100)
+
+-200 + 300 = 800 + 300 = 1 100 (+100)
+
+complément à 2 (256) // avant complément à 10 000
+
+0 0__0 0
+1 1__1 127
+1 0__0 -128
+1 1__1 -1
+
+1111 1111
++1
+= 0
+
+ne pas modifier une liste que l'on est en train de balayer

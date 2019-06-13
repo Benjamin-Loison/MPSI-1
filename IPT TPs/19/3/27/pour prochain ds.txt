@@ -1,0 +1,2 @@
+utf8
+surtout matrice, traitement image, pgm, lecture type bytes
