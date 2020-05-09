@@ -10,6 +10,8 @@ Compte-rendu
 
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/PCThumbnail.jpg)
 
+Traitement d'image à partir du logo de Fénelon
+
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/flou.jpg)
 
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/flou25.jpg)
@@ -21,5 +23,7 @@ Compte-rendu
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/superpose.jpg)
 
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/superposeBW.jpg)
+
+Image générée de zéro
 
 ![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/sattelite2.jpg)
