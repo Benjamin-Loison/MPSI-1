@@ -26,4 +26,4 @@ Traitement d'image à partir du logo de Fénelon
 
 Image générée de zéro
 
-![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT%20TPs/19/3/20/JPG/sattelite2.jpg)
+![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/IPT/IPT%20TPs/19/3/20/JPG/sattelite2.jpg)
