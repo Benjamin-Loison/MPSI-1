@@ -1,4 +1,4 @@
-# MPSI1
+# MPSI 1
 
 My source codes for Python exercises.
 
