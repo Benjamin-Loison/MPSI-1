@@ -2,4 +2,4 @@ Ré-enregistrement de la présentation que l'on a dû faire au lycée à la fin 
 
 Prédiction TIPE MNIST:
 
-![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI1/master/TIPE/Prediction%20TIPE/example.jpg)
+![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI-1/master/TIPE/Prediction%20TIPE/example.jpg)
