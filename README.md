@@ -1,6 +1,6 @@
 # MPSI 1
 
-My source codes for Python exercises.
+<!-- My source codes for Python exercises. -->
 
 Prédiction TIPE MNIST:
 
