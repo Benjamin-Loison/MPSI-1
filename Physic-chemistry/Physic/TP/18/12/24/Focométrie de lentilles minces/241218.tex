@@ -1,0 +1,38 @@
+\documentclass{scrartcl}
+\usepackage{amsmath}
+\begin{document}
+
+	\title{Compte-rendu de travaux pratiques de physique}
+	\subtitle{Focométrie des lentilles minces}
+	\author{Benjamin Loison et Sara de Francqueville (MPSI 1)}
+	\date{24 décembre 2018}
+	\maketitle
+
+  \setcounter{section}{1}
+	\section{Evaluation de distances focales par autocollimation}
+
+		\subsection{Lentille convergente}
+
+			Dans le cas où l'image est dans le même plan que l'objet, car ceux-ci sont réelles car la lentille est convergente, le plan conjugué de lui-même par l'ensemble lentille-miroir est ce même plan.\\
+			On a: F $\xrightarrow[lentille]{}$ F' $\xrightarrow[miroir\ plan]{}$ F, on en déduit une distance focale $f'$ de 26 cm alors que celle réelle est de 30 cm. Cette différence peut s'expliquer par le fait que c'est difficile de déterminer exactement la distance entre les différents instruments optiques pour laquelle, l'objet et l'image sont exactement dans le même plan.\\
+			Cette méthode n'est pas applicable aux lentilles divergentes car elles ne forment pas d'image réelle.
+			
+			\subsection{Lentille divergente}
+
+			On accole la lentille divergente et une convergente et on vérifie à l'oeil nu si la lentille obtenue est convergente, si c'est bien le cas, on applique la technique précédente sinon on choisie une lentille d'une vergence plus élevée.
+
+	\section{Méthode de Bessel}
+	
+		Encore une fois en l'absence de lentille convergente, l'image est virtuelle et ne peut pas être observée sur l'écran.\\\\
+		On mesure $d$ = 108.5 cm et $D$ = 139 mm. En appliquant la formule, on obtient: $f'$ = 0.0135 m. En unités arbitraires, on mesure la distance verticale de l'image qui est de 350 pour la première position et de 3 pour la seconde et celle de l'objet est de 32. On a alors pour la première position un agrandissement de facteur 10.9 et pour la seconde position un agrandissement de facteur 0.09.\\
+		Il y a effectivement deux positions possible car mathématiquement on a un polynôme du second degré qui a un discriminant strictement positif.\\ % et physiquement ?
+		La méthode d'autocollimation dépend de la position exate du centre optique de la lentille alors que la méthode de Bessel non, ainsi elle est a préféré lorsque cette position est mal définie.
+		Mesurées au millimètre, les deux positions ont une incertitude de 0.5 mm. On en déduit que $D$ et $d$ ont une incertitude de 1 mm.\\
+		A l'aide de la formule de l'énoncé, on trouve une incertitude pour $f'$ de 0.03475 mm en prenant $D$ = 0.5 mm et $d$ = 0 mm.
+		
+		\section{Utilisation de la formule de Descartes}
+		
+		En fixant la distance $\overline{OA}$, en partant d'une distance nulle et en s'écartant, on trouve $\overline{OA'}$ lorsque l'image est nette sur l'écran en $A$. On applique alors naturellement la formule de Descartes.\\
+		Cette méthode ne s'applique donc pas aux lentilles divergentes qui présente seulement une image virtuelle.
+
+\end{document}

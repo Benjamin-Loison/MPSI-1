@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{pst-circ}
+\begin{document}
+
+	\title{Compte-rendu de travaux pratiques de physique}
+	\author{Benjamin Loison, Emilien Goujon et Capucine Gomez (MPSI 1)}
+	\date{7 novembre 2018}
+	\maketitle
+
+	\section{Etude d'une alimentation stabilisée}
+
+	\subsection{Détermination de $U_{eff}$ à partir de $U_{max}$ en considérant un signal sinusoïdal}
+
+	L'expérimentation nous a permis d'obtenir en suivant le protocole une tension maximale sur l'oscilloscope $U_{max}=2,5$ Volts
+
+	D'après les manuels d'utilisations de l'oscilloscope et du multimètre, on obtient comme approximation: \[ U_{max\ oscillo}=2.5 \pm 3\ \% \]
+
+	\begin{pspicture}[showgrid = false](6, 5)
+		\pnodes(0, 0){bottomLeft}(0, 4){topLeft}(5, 0){bottomRight}(5, 4){topRight}
+		\vac(bottomLeft)(topLeft){}
+		\newdiode(topLeft)(topRight){}
+		\wire(bottomLeft)(bottomRight)
+		\resistor(topRight)(bottomRight){}
+		\newground{135}(bottomRight)
+		\wire(topLeft)(1, 5)
+		\rput(1.5, 5){\textbf{$y_1$}}
+		\wire(topRight)(6, 5)
+		\rput(6.5, 5){\textbf{$y_2$}}
+	\end{pspicture}
+
+\end{document}

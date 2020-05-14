@@ -1,0 +1,137 @@
+\documentclass{scrartcl}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=3cm]{geometry}
+\usepackage{titlesec}
+\usepackage{pgfplotstable}
+\usepackage{csvsimple}
+
+\newcommand\courbe[1]{
+
+\begin{tabular}{@{}cc@{}}
+			
+				\begin{tabular}{l|c}%
+					\bfseries v (en mL) & \bfseries pH
+					\csvreader[head to column names]{data/courbe#1.csv}{}
+					{\\\hline\x & \y}
+				\end{tabular}
+
+				\pgfplotstableread[col sep = comma]{data/courbe#1.csv}\mydata
+
+				\begin{tikzpicture}
+					\begin{axis}[
+						xlabel=$v$ (en mL),
+						ylabel=$pH$]
+						\addplot[color = red, mark = x] table {\mydata};
+					\end{axis}
+				\end{tikzpicture}
+				
+		\end{tabular}\\
+		
+}
+		
+\setlength{\parindent}{0pt}
+\titlelabel{\thetitle\quad}
+
+% given
+\begin{document}
+
+	\title{\vspace{-2cm}Compte-rendu de travaux pratiques de chimie}
+	\subtitle{Dosages acido-basique de l'eau de Perrier}
+	\author{Benjamin LOISON et Alice MILFORD ASSEO (MPSI 1)}
+	\date{30 mars 2019}
+	\maketitle
+
+  \setcounter{section}{1}
+	\section{Exploitation}
+		\subsection{Courbe n\degree1}
+		
+			La réaction de dosage est la suivante: $H_2CO_3 + OH^- \rightleftharpoons HCO_3^- + H_2O$\\
+			
+			\courbe{1}
+		
+			On trouve $V_1$ = 19.5 mL.\\
+			A l'équivalence, on a: $[H_2CO_3]V_{Perrier} = [OH^-]V_1$\\
+			D'où: $[H_2CO_3] = \frac{[OH^-]V_1}{V_{Perrier}}$\\
+			AN: $x = [H_2CO_3] = \frac{0.1 * 19.5 * 10^{-3}}{50 * 10^{-3}} = 3.9 * 10^{-2}$ mol/L.
+	
+		\subsection{Courbe n\degree2}
+			
+			La réaction de dosage est la suivante: $HCO_3^- + Cl^- \rightleftharpoons CO_3^{2-} + HCl$
+			
+			\courbe{2}
+		
+			On trouve $V_2$ = 4.5 mL.\\
+			A l'équivalence, on a: $[HCO_3^-]V_{Perrier} = [Cl^-]V_2$\\
+			D'où: $[HCO_3^-] = \frac{[Cl^-]V_2}{V_{Perrier}}$\\
+			AN: $y = [HCO_3^-] = \frac{0.1 * 4.5 * 10^{-3}}{50 * 10^{-3}} = 9.0 * 10^{-3} mol/L.$
+			
+		\subsection{pH de l'eau de Perrier}
+			
+			On a: pH = pKa + log($\frac{y}{x}$)\\
+			AN: pH = 6.3 + log($\frac{9.0 * 10^{-3}}{3.9 * 10^{-2}}$) = 5.66.\\
+			Expérimentalement on mesure un pH de 5.34.\\
+			On a: $|\frac{pH_{th\acute{e}orique} - pH_{exp\acute{e}rimental}}{pH_{exp\acute{e}rimental}}| = |\frac{5.66 - 5.34}{5.34}| = 5.99 * 10^{-2}$.\\
+			On trouve un écart relatif entre la valeur expérimentale et celle théorique de 6 \%.
+			
+		\subsection{"Raccorder" les deux courbes précédentes}
+		
+			\begin{tabular}{@{}cc@{}}
+			
+				\begin{tabular}{l|c}%
+					\bfseries v (en mL) & \bfseries pH
+					\csvreader[head to column names]{data/raccord.csv}{}
+					{\\\hline\x & \y}
+				\end{tabular}
+
+				\pgfplotstableread[col sep = comma]{data/raccord.csv}\mydata
+
+				\begin{tikzpicture}
+					\begin{axis}[
+						xlabel=$\leftarrow V_{HCl}$ (en mL) $\hspace{2cm} V_{NaOH}$ (en mL) $\rightarrow$,
+						ylabel=$pH$, xticklabels={, 10, 0, 10, 20, 30}]
+						\addplot[color = red, mark = x] table {\mydata};
+					\end{axis}
+				\end{tikzpicture}
+				
+		\end{tabular}\\
+		
+		La première acidité de l'ion $H_2CO^3$ étant faible, on lit le pKa à la demi-équivalence donc pour $V_{NaOH}$ = 9.75 mL. On trouve donc pKa = 6.21.\\% SURE ?
+		Ce qui est proche de la valeur théorique qui est 6.3, l'écart relative est $\frac{6.3 - 6.21}{6.21} = 1.4$ \%
+		
+		\subsection{Si l'on poursuivait l'ajout de soude, quelle forme aurait la prolongation de la courbe 3 vers la droite ?}
+		
+			Ceci revient à considérer un jerrican de soude ajouté à un dé à coudre de solution. Donc le pH tendrait alors vers le pH de l'hydroxyde de sodium, c'est-à-dire 13.
+			
+		\subsection{Quel est le précipité qui apparaît et trouble la solution vers pH $\approx$ 10 ?}
+		
+		\begin{tabular}{|c|c|c|c|}
+				\hline ion & mg/L & g/mol & mmol/L\\
+				\hline $Ca^{2+}$ & 150 & 40.1 & 3.74\\
+				\hline $Mg^{2+}$ & 3.9 & 24.3 & $1.70 * 10^{-1}$\\
+				\hline $HCO_3^+$ & 420 & 52.0 & 8.1\\
+				\hline
+		\end{tabular}\\
+				
+		Pour pH $\approx 10$
+				
+		Equations de dissolution:\\
+	
+		$Ca(OH)_2 \rightleftharpoons Ca^{2+} + 2OH^-$\\
+		$K = [Ca^{2+}][OH^-]^2 = 3.74 * 10^{-3} * 10^{-8} \approx 10^{-10.42} < Ks = 10^{-5.26}$\\
+		On considère que le pH vaut 10 et $[OH^-] = \frac{Ke}{[H_3O^+]} = \frac{Ke}{10^{-10}} = 10^{-4}$ mol/L.\\
+		
+		$Mg(OH)_2 \rightleftharpoons Mg^{2+} + 2OH^-$\\
+		$[Mg^{2+}][OH^-]^2 = 1.70 * 10^{-4} * 10^{-8} \approx 1.70 * 10^{-12} < Ks = 10^{-9.22}$\\
+		
+		$CaCO_3 \rightleftharpoons Ca^{2+} + CO_3^{2-}$\\
+		$K = [Ca^{2+}][CO_3^{2-}] = 3.74 * 10^{-3} * 8.1 * 10^{-3} \approx 3.0 * 10^{-5} > Ks = 10^{-8.32}$\\
+		Donc cette espèce précipite.\\
+		
+		$MgCO_3 \rightleftharpoons Mg^{2+} + CO_3^{2-}$\\
+		$[Mg^{2+}][CO_3^{2-}] = 1.70 * 10^{-4} * 8.1 * 10^{-3} \approx 1.4 * 10^{-6} < Ks = 10^{-4.67}$\\
+		
+		Le seul produit de solubilité atteint est celui du carbonate de calcium, se forme donc qu'un précipité de carbonate de calcium. Effectivement expérimentalement on en observe un blanc.
+		
+\end{document}

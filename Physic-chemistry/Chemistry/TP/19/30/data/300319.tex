@@ -1,0 +1,193 @@
+\documentclass{scrartcl}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=3cm]{geometry}
+\usepackage{titlesec}
+\setlength{\parindent}{0pt}
+\titlelabel{\thetitle\quad}
+
+\begin{document}
+
+	\title{\vspace{-2cm}Compte-rendu de travaux pratiques de chimie}
+	\subtitle{Dosages acido-basique de l'eau de Perrier}
+	\author{Benjamin LOISON et Alice MILFORD ASSEO (MPSI 1)}
+	\date{30 mars 2019}
+	\maketitle
+
+  \setcounter{section}{1}
+	\section{Exploitation}
+		\subsection{Courbe n\degree1}
+		
+			La réaction de dosage est la suivante: $H_2CO_3 + OH^- \rightleftharpoons HCO_3^- + H_2O$\\
+			
+			\begin{tabular}{@{}cc@{}}
+			
+			\begin{tabular}{|c|c|}
+			\hline v (en mL) & pH \\
+			\hline 0 & 5.34 \\
+			\hline 1 & 5.40 \\
+			\hline 2 & 5.53 \\
+			\hline 3 & 5.64 \\
+			\hline 4 & 5.74 \\
+			\hline 5 & 5.83 \\
+			\hline 6 & 5.91 \\
+			\hline 7 & 6.01 \\
+			\hline 8 & 6.07 \\
+			\hline 9 & 6.16 \\
+			\hline 10 & 6.24 \\
+			\hline 11 & 6.34 \\
+			\hline 12 & 6.39 \\
+			\hline 13 & 6.49 \\
+			\hline 14 & 6.59 \\
+			\hline 15 & 6.72 \\
+			\hline 16 & 6.85 \\
+			\hline 17 & 7.01 \\
+			\hline 18 & 7.24 \\
+			\hline 19 & 7.63 \\
+			\hline 20 & 8.24 \\
+			\hline 21 & 8.67 \\
+			\hline 22 & 8.91 \\
+			\hline 23 & 9.08 \\
+			\hline 24 & 9.22 \\
+			\hline 25 & 9.35 \\
+			\hline 26 & 9.45 \\
+			\hline 27 & 9.55 \\
+			\hline 28 & 9.65 \\
+			\hline 29 & 9.74 \\
+			\hline 30 & 9.82 \\
+			\hline
+		\end{tabular}
+
+			\begin{tikzpicture}
+			\begin{axis}[
+				xlabel=$v$ (en mL),
+				ylabel=$pH$]
+			\addplot[color = red, mark = x] coordinates {
+				(0, 5.34)
+				(1, 5.4)
+				(2, 5.53)
+				(3, 5.64)
+				(4, 5.74)
+				(5, 5.83)
+				(6, 5.91)
+				(7, 6.01)
+				(8, 6.07)
+				(9, 6.16)
+				(10, 6.24)
+				(11, 6.34)
+				(12, 6.39)
+				(13, 6.49)
+				(14, 6.59)
+				(15, 6.72)
+				(16, 6.85)
+				(17, 7.01)
+				(18, 7.24)
+				(19, 7.63)
+				(20, 8.24)
+				(21, 8.67)
+				(22, 8.91)
+				(23, 9.08)
+				(24, 9.22)
+				(25, 9.35)
+				(26, 9.45)
+				(27, 9.55)
+				(28, 9.65)
+				(29, 9.74)
+				(30, 9.82)
+			};
+			\end{axis}
+		\end{tikzpicture}		
+		\end{tabular}\\
+		
+		On trouve $V_1$ = 19.5 mL.\\
+		A l'équivalence, on a: $[H_2CO_3]V_{Perrier} = [OH^-]V_1$\\
+		D'où: $[H_2CO_3] = \frac{[OH^-]V_1}{V_{Perrier}}$\\
+		AN: $x = [H_2CO_3] = \frac{0.1 * 19.5 * 10^{-3}}{50 * 10^{-3}} = 3.9 * 10^{-2}$ mol/L.
+	
+		\subsection{Courbe n\degree2}
+			
+			La réaction de dosage est la suivante: $HCO_3^- + Cl^- \rightleftharpoons CO_4^{2-} + HCl$
+			
+			\begin{tabular}{@{}cc@{}}
+			
+			\begin{tabular}{|c|c|}
+			\hline v (en mL) & pH \\
+			\hline 0 & 5.35 \\
+			\hline 1 & 5.33 \\
+			\hline 2 & 5.21 \\
+			\hline 3 & 5 \\
+			\hline 4 & 4.65 \\
+			\hline 5 & 3.25 \\
+			\hline 6 & 2.65 \\
+			\hline 7 & 2.47 \\
+			\hline 8 & 2.36 \\
+			\hline 9 & 2.28 \\
+			\hline 10 & 2.22 \\
+			\hline 11 & 2.17 \\
+			\hline 12 & 2.13 \\
+			\hline 13 & 2.09 \\
+			\hline 14 & 2.05 \\
+			\hline 15 & 2.02 \\
+			\hline
+		\end{tabular}
+
+			\begin{tikzpicture}
+			\begin{axis}[
+				xlabel=$v$ (en mL),
+				ylabel=$pH$]
+			\addplot[color = red, mark = x] coordinates {
+				(0, 5.35)
+				(1, 5.33)
+				(2, 5.21)
+				(3, 5)
+				(4, 4.65)
+				(5, 3.25)
+				(6, 2.65)
+				(7, 2.47)
+				(8, 2.36)
+				(9, 2.28)
+				(10, 2.22)
+				(11, 2.17)
+				(12, 2.13)
+				(13, 2.09)
+				(14, 2.05)
+				(15, 2.02)
+			};
+			\end{axis}
+		\end{tikzpicture}		
+		\end{tabular}\\
+		
+		On trouve $V_2$ = 4.5 mL.\\
+		A l'équivalence, on a: $[HCO_3^-]V_{Perrier} = [Cl^-]V_2$\\
+		D'où: $[HCO_3^-] = \frac{[Cl^-]V_2}{V_{Perrier}}$\\
+		AN: $y = [HCO_3^-] = \frac{0.1 * 4.5 * 10^{-3}}{50 * 10^{-3}} = 9.0 * 10^{-3} mol/L.$
+			
+		\subsection{pH de l'eau de Perrier}
+			
+			On a: pH = pKa + log($\frac{y}{x}$)\\
+			AN: pH = 6.3 + log($\frac{9.0 * 10^{-3}}{3.9 * 10^{-2}}$) = 5.66.\\
+			Expérimentalement on mesure un pH de 5.34.\\
+			On a: $|\frac{pH_{th\acute{e}orique} - pH_{exp\acute{e}rimental}}{pH_{exp\acute{e}rimental}}| = |\frac{5.66 - 5.34}{5.34}| = 5.99 * 10^{-2}$.\\
+			On trouve un écart relatif entre la valeur expérimentale et celle théorique de 6 \%.
+			
+		\subsection{"Raccorder" les deux courbes précédentes}
+		
+			\begin{tabular}{@{}cc@{}}
+			
+			\begin{tabular}{|c|c|}
+			\hline v (en mL) & pH \\
+			\hline 0 & 5.35 \\
+			\hline
+		\end{tabular}
+
+			\begin{tikzpicture}
+			\begin{axis}[
+				xlabel=$\leftarrow V_{HCl}$ (en mL) $\hspace{2cm} V_{NaOH}$ (en mL) $\rightarrow$,
+				ylabel=$pH$]
+			\addplot[color = red, mark = x] table {raccord.txt};
+			\end{axis}
+		\end{tikzpicture}		
+		\end{tabular}\\
+			
+\end{document}

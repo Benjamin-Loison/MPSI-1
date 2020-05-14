@@ -1,0 +1,336 @@
+Calcul derivees
+FALSE
+Debye Huckel
+FALSE
+Empecher redox
+TRUE
+Afficher avertissement redox
+TRUE
+Point décimal export
+FALSE
+Nombre points calcul
+186
+Pas adaptatif
+TRUE
+Variation log max
+ 5.00000000000000000000E-0001
+Limite inférieure pas
+ 9.99999999999999999980E-0003
+Volume bécher
+10
+Espéces bécher
+1
+Début espéce
+Identifiant
+H3PO4(aq)
+Concentration
+0.05
+Fin espéce
+Fin espéces bécher
+Volume burette
+20
+Espéces burette
+1
+Début espéce
+Identifiant
+NaOH(aq)
+Concentration
+0.1
+Fin espéce
+Fin espéces burette
+Validation des espéces
+18
+H2O
+TRUE
+HPO4[2-]
+TRUE
+H[+]
+TRUE
+Na[+]
+TRUE
+H2P2O7[2-]
+TRUE
+H2PO4[-]
+TRUE
+H3P2O7[-]
+TRUE
+H3PO4(aq)
+TRUE
+H4P2O7(aq)
+TRUE
+HP2O7[3-]
+TRUE
+NaHP2O7[2-]
+TRUE
+NaHPO4[-]
+TRUE
+NaOH(aq)
+TRUE
+NaP2O7[3-]
+TRUE
+OH[-]
+TRUE
+P2O7[4-]
+TRUE
+PO4[3-]
+TRUE
+Na2O(s)
+TRUE
+Fin validation des espéces
+Réactions et constantes
+14
+Début réaction
+Réaction
+2 HPO4[2-] + 2 H[+] = H2O + H2P2O7[2-]
+logk
+12.2
+Fin réaction
+Début réaction
+Réaction
+HPO4[2-] + H[+] = H2PO4[-]
+logk
+7.2
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] + 3 H[+] = H2O + H3P2O7[-]
+logk
+14.5
+Fin réaction
+Début réaction
+Réaction
+HPO4[2-] + 2 H[+] = H3PO4(aq)
+logk
+9.32
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] + 4 H[+] = H2O + H4P2O7(aq)
+logk
+16
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] + H[+] = H2O + HP2O7[3-]
+logk
+5.56
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] + H[+] + Na[+] = H2O + NaHP2O7[2-]
+logk
+6.88
+Fin réaction
+Début réaction
+Réaction
+HPO4[2-] + Na[+] = NaHPO4[-]
+logk
+0.92
+Fin réaction
+Début réaction
+Réaction
+H2O + Na[+] = H[+] + NaOH(aq)
+logk
+-14.8
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] + Na[+] = H2O + NaP2O7[3-]
+logk
+-1.44
+Fin réaction
+Début réaction
+Réaction
+H2O = H[+] + OH[-]
+logk
+-14
+Fin réaction
+Début réaction
+Réaction
+2 HPO4[2-] = H2O + P2O7[4-]
+logk
+-3.75
+Fin réaction
+Début réaction
+Réaction
+HPO4[2-] = H[+] + PO4[3-]
+logk
+-12.4
+Fin réaction
+Début réaction
+Réaction
+H2O + 2 Na[+] = 2 H[+] + Na2O(s)
+logk
+-67.5
+Fin réaction
+Fin réactions et constantes
+Grandeurs à tracer
+Abscisse
+V
+Ordonnées
+6
+Début ordonnée
+Expression
+pH
+Couleur
+16711680
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Droite
+Legende
+pH
+Fin ordonnée
+Début ordonnée
+Expression
+[HPO4[2-]]
+Couleur
+255
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Gauche
+Legende
+[HPO4[2-]]
+Fin ordonnée
+Début ordonnée
+Expression
+[NaOH(aq)]
+Couleur
+32768
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Gauche
+Legende
+[NaOH(aq)]
+Fin ordonnée
+Début ordonnée
+Expression
+[PO4[3-]]
+Couleur
+65535
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Gauche
+Legende
+[PO4[3-]]
+Fin ordonnée
+Début ordonnée
+Expression
+[H2PO4[-]]
+Couleur
+16711935
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Gauche
+Legende
+[H2PO4[-]]
+Fin ordonnée
+Début ordonnée
+Expression
+[H3PO4(aq)]
+Couleur
+128
+Taille point
+2
+Epaisseur trait
+1
+Style
+Disque
+Joindre
+FALSE
+Echelle
+Gauche
+Legende
+[H3PO4(aq)]
+Fin ordonnée
+Echelle gauche automatique
+TRUE
+Echelle droite automatique
+TRUE
+Echelle horizontale automatique
+TRUE
+Abscisse minimale
+ 0.00000000000000000000E+0000
+Abscisse maximale
+ 2.00000000000000000000E+0001
+Ordonnée minimale gauche
+ 0.00000000000000000000E+0000
+Ordonnée maximale gauche
+ 3.39397578999165046378E-0002
+Ordonnée minimale droite
+ 1.79452961400594831814E+0000
+Ordonnée maximale droite
+ 1.24197240467668469296E+0001
+Fin grandeurs à tracer
+Début embellissement graphique
+Légende présente
+FALSE
+Legende a part presente
+TRUE
+Titre
+Dosage de 10mL de H3PO4(aq) (0.05 mol/L),  par 20mL  de NaOH(aq) (0.1 mol/L)
+Label x
+V
+Label y gauche
+
+Label y droit
+pH
+Unité x
+
+Unité y gauche
+
+Unité y droit
+
+Grille droite
+FALSE
+Grille gauche
+TRUE
+Cadre présent
+TRUE
+Graduations
+TRUE
+Couleur fond
+16777215
+Couleur grille gauche
+0
+Couleur grille droite
+0
+Couleur axes
+0
+Couleur graduations
+0
+Fin embellissement graphique

@@ -1,0 +1,109 @@
+\documentclass{scrartcl}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{pgfplotstable}
+\usepackage{csvsimple}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=3cm]{geometry}
+\renewcommand{\thesection}{\Roman{section}-}
+\renewcommand{\thesubsection}{\Roman{section}-\arabic{subsection}}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle\quad}
+
+\begin{document}
+
+	\title{\vspace{-2cm}Compte-rendu de travaux pratiques de chimie}
+	\subtitle{Spectrophotométrie}
+	\author{Benjamin Loison (MPSI 1)}
+	\date{}
+	\maketitle
+
+  \setcounter{section}{2}
+	\section{Partie expérimentale}
+	
+		\subsection{Vérification de la loi de Beer-Lambert}
+	
+			On résume les données expérimentales dans le tableau de données suivant:\\
+			
+			\begin{tabular}{|c|c|}
+					\hline $C$ (en mol/L) & absorbance A \\
+					\hline 0.4 & 2.534\\
+					\hline 0.2 & 1.227\\
+					\hline 0.15 & 0.959\\
+					\hline 0.075 & 0.477\\
+					\hline 0.0375 & 0.241\\
+					\hline
+				\end{tabular}\\\\
+	
+			\begin{tikzpicture}
+			\begin{axis}[
+				xlabel=$A$,
+				ylabel=$C$ (en mol/L)]
+			\addplot[color = red, mark = x] coordinates {
+				(0.4, 2.534)
+				(0.2, 1.224)
+				(0.15, 0.959)
+				(0.075, 0.477)
+				(0.0375, 0.241)
+			};
+			\end{axis}
+		\end{tikzpicture}
+		
+		On remarque que le nuage de points forment une droite passant par l'origine ainsi la loi de Beer-Lambert est vérifiée. Plus précisément à l'aide d'une régression linéaire on trouve $C = 158.5 * A$.
+	
+		\subsection{Spectre d'un indicateur coloré acido-basique}
+			
+				%\begin{tabular}{l|c|c|c}%
+				%	\bfseries $\lambda$ (en nm) & \bfseries A (absorbance à pH = 9) & \bfseries A (à pH = 2) & \bfseries A (à pH = 3.66)
+				%	\csvreader[head to column names]{data/courbe.csv}{}
+				%	{\\\hline\l & \a & \b & \c}
+				%\end{tabular}
+
+				\pgfplotstableread[col sep = comma]{data/courbe1.csv}\one
+				\pgfplotstableread[col sep = comma]{data/courbe2.csv}\two
+				\pgfplotstableread[col sep = comma]{data/courbe3.csv}\three
+
+				\begin{tikzpicture}
+					\begin{axis}[
+						xlabel=$\lambda$ (en nm),
+						ylabel=$A$]
+						\addplot[color = red, mark = .] table {\one};
+						\addplot[color = green, mark = .] table {\two};
+						\addplot[color = blue, mark = .] table {\three};
+					\end{axis}
+				\end{tikzpicture}
+			
+				A pH = 9, on remarque un maximum d'absorption de 0.9486 à la longueur d'onde 591 nm qui correspond à une couleur visible bleue. (couleur opposée à 591 nm sur une représentation chromatique).\\
+				A pH = 2, on remarque un maximum d'absorption de 0.3104 à la longueur d'onde 437 nm qui correspond à une couleur visible jaune.\\
+				On obtient un pH intermédiaire de 3.66, on remarque alors deux maximum d'absorption aux longeurs d'onde 439 nm et 591 nm où l'absorbance est respectivement de 0.1960 et 0.3116.
+			
+			\subsubsection{Longeurs d'onde des maxima d'absorption}
+			
+
+			
+			\subsubsection{Point isobestique}
+			
+				On relève cette intersection non précise des trois courbes à une longueur de 495 nm avec pour absorbance respectives des 3 courbes:\\
+				$A_1$ = 0.09260, $A_2$ = 0.09820 et $A_3$ = 0.08500.\\
+				Par simple moyenne on obtient $A = 0.0919$.
+			
+			\subsubsection{Détermination du pKa de HIn/In$^-$}
+			
+				A partir des relations:\\
+				$A_A(\lambda) = [HIn]\epsilon_A(\lambda)L$\\
+				$A_B(\lambda) = [In^-]\epsilon_B(\lambda)L$\\\\
+				
+				On note:
+				\begin{equation}
+					A_B(\lambda) - A(\lambda) = -A_A(\lambda)
+				\end{equation}
+				\begin{equation}
+					A(\lambda) - A_A(\lambda) = -A_B(\lambda)
+				\end{equation}
+				
+				On obtient alors:\\
+				$log\left(\frac{(1)}{(2)}\right) = log\left(\frac{A_A(\lambda)}{A_B(\lambda)}\right) = log\left(\frac{\epsilon_A(\lambda)}{\epsilon_B(\lambda)}\right) + log\left(\frac{[HIn]}{[In^-]}\right)$.\\
+				D'où: $log\left(\frac{A_B(\lambda) - A(\lambda)}{A(\lambda) - A_A(\lambda)}\right) = log\left(\frac{\epsilon_A(\lambda)}{\epsilon_B(\lambda)}\right) + pKa - pH$.\\
+				Si $\frac{\epsilon_A(\lambda)}{\epsilon_B(\lambda)} \approx 1$ alors $log\left(\frac{\epsilon_A(\lambda)}{\epsilon_B(\lambda)}\right) \approx 0$ donc $pKa = pH + log\left(\frac{A_B(\lambda) - A(\lambda)}{A(\lambda) - A_A(\lambda)}\right)$
+			
+\end{document}

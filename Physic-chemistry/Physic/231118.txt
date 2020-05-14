@@ -1,0 +1,31 @@
+1.
+
+c = 15 m.s^-1
+élongation cm
+y1 = sin(100Pit)
+w=2pi f = 100 pi
+f = 50
+T = 1 / f = 0.02 s^-1
+lambda = c / f = cT = 15 / 50 = 3 / 10 = 0.3 m
+M1M2 = 5 cm
+delta phi = 2 Pit/T = 2 Pid/lambda = 2Pi M1M2/lambda = 2Pi * 0.05 / 0.3 = 2Pi * 0.5 / 3 = Pi/3 = 0.33 Pi
+y1 = sin(100Pit) / 100 meters
+
+2.
+
+c = 15 m.s^-1
+élongation: cm y1 = 2sin(100Pit)
+
+a.
+
+M1M2 = 5 cm soit 0.05 meters
+Tau = M1M2 / c = 0.05 / 15 = 1 / 300 = (1 / 3) * 10^-2 = 0.0033 s
+y2 = 2sin(100Pi(t - 1 / 300))
+
+b.
+
+même pulsation donc même période
+Delta phi = 2Pi t / T = 2 Pi * 50 / 300 = Pi / 3
+y2 = sin(100Pi(t - 1 / 300)) / 50
+y1 = sin(100Pit) / 50
+

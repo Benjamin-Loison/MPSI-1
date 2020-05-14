@@ -1,0 +1,13 @@
+cadmium (Cd) 0
+Hg (mercure) 1
+néon Hg (mercure) 2
+
+8456 hauteur / 2 = 4228
+642.5 nm - 662.6 nm = 20.1 nm (largeur à mi-hauteur)
+
+laser: 670 nm
+7545 / 2 = 3772.5
+656.2 nm - 657.3 nm = 1.1 nm
+
+lumière 11.2v 3
+

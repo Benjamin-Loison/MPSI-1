@@ -1,0 +1,99 @@
+\documentclass{scrartcl}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{amssymb}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=3cm]{geometry}
+\usepackage{titlesec}
+\usepackage{pgfplotstable}
+\usepackage{csvsimple}
+\setlength{\parindent}{0pt}
+\titlelabel{\thetitle\quad}
+
+\newcommand\courbe[1]{
+
+\begin{tabular}{@{}cc@{}}
+			
+				\begin{tabular}{l|c}%
+					\bfseries v (en mL) & \bfseries ddp (en mV)
+					\csvreader[head to column names]{data/courbe#1.csv}{}
+					{\\\hline\x & \y}
+				\end{tabular}
+
+				\pgfplotstableread[col sep = comma]{data/courbe#1.csv}\mydata
+
+				\begin{tikzpicture}
+					\begin{axis}[
+						xlabel=$v$ (en mL),
+						ylabel=$ddp$ (en mV)]
+						\addplot[color = red, mark = x] table {\mydata};
+					\end{axis}
+				\end{tikzpicture}
+				
+		\end{tabular}\\
+		
+}
+
+\begin{document}
+
+	\title{\vspace{-2cm}Compte-rendu de travaux pratiques de chimie}
+	\subtitle{Argentométrie}
+	\author{Benjamin LOISON et Alice MILFORD ASSEO (MPSI 1)}
+	\date{13 avril 2019}
+	\maketitle
+
+	\section{Dosage de la solution AgNO$_3$}
+		
+		\subsection{Prépaer par pesée une solution KCl}
+		
+			La masse molaire de KCl est M(KCl) = 74.56 g/mol.\\
+			La masse KCl a prélevé vaut: $m(KCl) = \frac{74.56}{20} = 3.728 \approx 3.73$ g.\\
+			On prépare la solution de la dissolution de KCl dans 50 mL.
+		
+		\subsection{Dosage de Mohr}
+		
+			\courbe{1}
+		
+			On prélève 10 mL de la solution préparée, on la dilue en remplissant la fiole jaugée de 100 mL avec de l'eau distillée. On obtient une solution de concentration à 0.1 mol/L.\\
+			On prélève de nouveau 10 mL de cette dernière solution et on la redilue pour obtenir à la fin une solution de concentration 10$^{-2}$ mol/L de KCl.\\
+			On verse 10 mL de la solution dans un bécher, on ajoute quelques gouttes de $Ag_2CrO_4$ (3 gouttes) à la solution à doser (la concentration en KCl est de 10$^{-2}$ mol/L) et environ 20 à 25 mL d'eau distillée.\\
+			On dose avec une solution titrante de $AgNO_3$.\\
+			On remplit la rallonge de $KNO_3$ pour empêcher le contact entre Cl$^-$ et Ag$^+$, pour éviter la précipitation d'AgCl.\\
+			La réaction qui a lieu lors du dosage est la suivante:\\
+			Ag$^+$ + Cl$^-$ $\rightleftharpoons$ AgCl$_{(s)}$\\
+			On a alors $K_s$ = [Cl$^-$][Ag$^+$].\\
+			A l'équivalence, on a: $x v_0 = c_1 v_{eq}$\\
+			D'où: $x = \frac{c_1 v_{eq}}{v_0}$.\\\\
+			- Tant que v $\leqslant v_{eq}$:\\
+			On a alors [Ag$^+$] = $\frac{K_s}{[Cl^-]}$\\
+			et $[Cl^-] = \frac{c_1 v - v_0 x}{v + v_0}$.\\
+			On a: $u_{total} = u_{Ag} + u_{ref} = 197 + 0.8 + 0.06 * log\left(\frac{K_s}{[Cl^-]}\right) = 197.8 + 0.06 * log\left(\frac{K_s(v + v_0)}{c_1 v - v_0 x}\right)$\\\\
+			- Si v $\geqslant v_{eq}$:\\
+			On a alors [Ag$^+$] = $\frac{c_1 v - x v_0}{v + v_0}$\\
+			$u_{total} = 197.8 + 0.06 * log\left(\frac{c_1 v - x v_0}{v + v_0}\right)$\\
+			On a d'après la courbe, $v_{eq}$ = 14.3 mL.\\
+			On a $x = \frac{c_1 v_{eq}}{v_0} = \frac{10^{-2} * 14.3 * 10^{-3}}{30 * 10^{-3}} = 4.7 * 10^{-3}$ mol/L.\\\\
+			
+			L'électrode de référence permet de mesurer une différence de potentiel, en gardant un potentiel invariant pour l'électrode de référence. Cependant celui-ci peut-être un peu modifié s'il y a variation de température.\\
+			
+	\section{Autres dosages par précipitation}
+		
+		\subsection{Dosage d'une solution KSCN}
+		
+			\courbe{2}
+		
+			Dans un bécher, on verse 10 mL d'$AgNO_3$, acidifié par environ 1 à 2 mL de $HNO_3$ concentré, on ajoute au mélange quelques gouttes de Fe$^{3+}$ (4 gouttes) et 13 mL d'eau distillée.\\
+			On verse la solution de KSCN dans la burette et on commence le dosage.\\
+			A l'équivalence, on a: $v_{eq} = 12.2 mL$.\\
+			On a alors $v_0 c_0 = c_1 v_{eq}$\\
+			donc $c_0 = \frac{c_1 v_{eq}}{v_0} = \frac{10^{-2} * 12.2 * 10^{-3}}{24 * 10^{-3}} = 5 * 10^{-3}$ mol/L.\\
+			Donc la concentration de la solution de KSCN est $c_0 = 5 * 10^{-3}$ mol/L.\\
+			Il est nécessaire de se placer en milieu acide pour ne pas avoir la précipitation de $Fe(OH)_3$
+		
+		\subsection{Dosage d'une solution KSCN et KI par AgNO$_3$}
+		
+			\courbe{3}
+		
+			
+		
+\end{document}

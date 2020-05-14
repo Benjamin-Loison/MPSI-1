@@ -1,0 +1,7 @@
+Ecart-type sur Brute_E=5,352 10³ s.u
+Intervalle de confiance à 95%
+x=(3,71 ±0,19)10³ S.I.
+
+Brute_E=A/((x^5)*EXP(B/A)-1)
+
+use Regressi for calculus

@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{siunitx}
+\usepackage[utf8x]{inputenc}
+\begin{document}
+
+\title{Compte-rendu n°2 de travaux pratiques de physique}
+\author{Benjamin Loison et Théophane Cengiz (MPSI 1)}
+\date{26 septembre 2018}
+\maketitle
+
+\section{Observation du signal d'un générateur basse fréquence}
+
+\subsection{Détermination de $U_{eff}$ à partir de $U_{max}$ en considérant un signal sinusoïdal}
+
+L'expérimentation nous a permis d'obtenir en suivant le protocole une tension maximale sur l'oscilloscope $U_{max}=2,5$ Volts, d'où par multiplication par un facteur $\frac{1}{\sqrt2}$, on obtient approximativement $U_{eff}=1,77$ V. Cette valeur est presque identique à celle donné par un multimètre.
+
+D'après les manuels d'utilisations de l'oscilloscope et du multimètre, on obtient comme approximation: \[ U_{max\ oscillo}=2.5 \pm 3\ \% \]
+\[ U_{max\ multi}=1.78 \pm 0.8\ \% + 4d \]
+
+\subsection{Détermination de la résistance $r_g$}
+
+\section{Calcul des intégrales de différentes formes de signaux}
+
+L'expérimentation nous a permis d'obtenir en suivant le protocole une tension $U$ tel que $U$ = $\frac{U_0}{2}$, la résistance était alors de 64 \si{\ohm}.
+
+\subsection{Cas du signal carré}
+
+\subsubsection{Valeur moyenne du signal redressé: $u_{red}$}
+
+On rappelle que: \[ u_{red}=\frac{1}{T}\int_{0}^{T} \left| u(t) \right| dt \]
+
+En considérant la valeur absolue d'un signal carré, on se rend compte que le signal est alors une constante de valeur $U_{max}$, ainsi l'intégrale de ce signal sur un intervalle d'une période $T$ est égale à $U_{max} * T$.
+D'où: \[ u_{red}=\frac{1}{T} * (T * U_{max}) \]
+Donc: \[ u_{red}=U_{max} \]
+
+\subsubsection{Valeur efficace du signal: $u_{eff}$}
+
+On rappelle que: \[ u_{eff}=\sqrt{\frac{1}{T}\int_{0}^{T} u^2(t) dt} \]
+
+De la même manière que précédemment, en considérant le carré d'un signal carré, on se rend compte que le signal est alors une constante de valeur $U_{max}^2$, ainsi l'intégrale de ce signal sur un intervalle d'une période $T$ est égale à $U_{max}^2 * T$.
+D'où: \[ u_{eff}=\sqrt{\frac{1}{T} * (T * U_{max}^2)} \]
+Soit: \[ u_{eff}=\sqrt{U_{max}^2} \]
+Donc: \[ u_{eff}=U_{max} \]
+
+\subsection{Cas du signal triangulaire}
+
+\subsubsection{Valeur moyenne du signal redressé: $u_{red}$}
+
+On rappelle que: \[ u_{red}=\frac{1}{T}\int_{0}^{T} \left| u(t) \right| dt \]
+
+En considérant la valeur absolue d'un signal triangulaire, on se rend compte que le signal est alors un rectangle de hauteur $U_{max}$ et de base $\frac{T}{2}$, ainsi l'intégrale de ce signal sur un intervalle d'une période $T$ est égale à cette même intégrale sur un intervalle $\frac{T}{2}$, où $u(t)$ est une constante de valeur $U_{max}$.
+D'où:  \[ u_{red}=\frac{1}{T} * (\frac{T}{2} * U_{max}) \]
+Donc: \[ u_{red}=\frac{U_{max}}{2} \]
+D'où la valeur affichée (en multipliant par le coefficient: $\frac{\pi}{2\sqrt2}$: \[ u_{red\ aff}=\frac{U_{max} * \pi}{2\sqrt2} \]
+
+\subsubsection{Valeur efficace du signal: $u_{eff}$}
+
+On rappelle que: \[ u_{eff}=\sqrt{\frac{1}{T}\int_{0}^{T} u^2(t) dt} \]
+
+\subsection{Cas du signal sinusoïdal}
+
+\subsubsection{Valeur moyenne du signal redressé: $u_{red}$}
+
+On rappelle que: \[ u_{red}=\frac{1}{T}\int_{0}^{T} \left| u(t) \right| dt \]
+
+On choisit une équation d'un signal sinusoïdal: \[ u(t)=U_{max} * sin(wt) \]
+
+En considérant la valeur absolue d'un signal sinusoïdal, on se rend compte que l'intégrale de ce signal sur un intervalle $T$ est égale à la même intégrale sur un intervalle $\frac{T}{2}$, de valeur maximale: $U_{max}$.
+D'où: \[ u_{red}=\frac{1}{T}\int_{0}^{T} \left| U_{max} * sin(wt) \right| dt \]
+Ainsi: \[ u_{red}=\frac{U_{max}}{T} * 2 \int_{0}^{\frac{T}{2}} sin(wt) dt \]
+Soit: \[ u_{red}=\frac{2 * U_{max}}{T} * 2 \left[\frac{-cos(wt)}{w}\right]_0^\frac{T}{2} \]
+D'où: \[ u_{red}=\frac{2 * U_{max}}{T} * \frac{2}{w} \]
+Donc: \[ u_{red}=\frac{2 * U_{max}}{\pi} \]
+D'où la valeur affichée (en multipliant par le coefficient: $\frac{\pi}{2\sqrt2}$: \[ u_{red\ aff}=\frac{U_{max}}{\sqrt2} \]
+
+\subsubsection{Valeur efficace du signal: $u_{eff}$}
+
+On rappelle que: \[ u_{eff}=\sqrt{\frac{1}{T}\int_{0}^{T} u^2(t) dt} \]
+
+On choisit une équation d'un signal sinusoïdal: \[ u(t)=U_{max} * sin(wt) \]
+
+En considérant le carré d'un signal sinusoïdal représenté par la formule précédente, on obtient: \[ u(t)=U_{max}^2 * sin^2(wt) \]
+
+D'où: \[ u_{eff}=\sqrt{\frac{1}{T}\int_{0}^{T} U_{max}^2 * sin^2(wt) dt} \]
+Soit: \[ u_{eff}=\sqrt{\frac{U_{max}^2}{2T}\int_{0}^{T} 1 - cos(2wt) dt} \]
+Ainsi: \[ u_{eff}=\sqrt{\frac{U_{max}^2}{2T} * T - \left[\frac{sin(2wt)}{2w}\right]_0^T} \]
+D'où: \[ u_{eff}=\sqrt{\frac{U_{max}^2}{2}} \]
+Donc: \[ u_{eff}=\frac{U_{max}}{\sqrt2} \]
+
+\end{document}

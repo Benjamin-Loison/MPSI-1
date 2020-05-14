@@ -1,0 +1,3209 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    143591,       3199]
+NotebookOptionsPosition[    141175,       3132]
+NotebookOutlinePosition[    141548,       3148]
+CellTagsIndexPosition[    141505,       3145]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"D", "[", "y", "]"}]}], "*", 
+     FractionBox[
+      RowBox[{"a", "+", 
+       RowBox[{"B", "*", "q"}]}], "m"]}], "-", 
+    RowBox[{"D", "[", 
+     RowBox[{"y", ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "2"}], "}"}]}], "]"}]}], ",", "y"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7601984004433804`*^9, 3.76019840258116*^9}, {
+  3.7601984345906997`*^9, 3.7601984834015703`*^9}, {3.7601985481862326`*^9, 
+  3.76019855062383*^9}, {3.7601985945610437`*^9, 
+  3.7601985960511847`*^9}},ExpressionUUID->"6ef0b74f-0d77-483d-be5f-\
+c7971cf01e11"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{"a", " ", 
+     SuperscriptBox["y", "2"]}], 
+    RowBox[{"2", " ", "m"}]]}], "-", 
+  FractionBox[
+   RowBox[{"B", " ", "q", " ", 
+    SuperscriptBox["y", "2"]}], 
+   RowBox[{"2", " ", "m"}]]}]], "Output",
+ CellChangeTimes->{3.760198439699758*^9, 3.760198484090173*^9, 
+  3.760198553652841*^9, 
+  3.760198596742756*^9},ExpressionUUID->"402c2675-11ba-41d4-8a27-\
+1dd04444041e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<x'\>\"", ",", 
+   RowBox[{"IncludePods", "\[Rule]", 
+    RowBox[{"{", "\"\<Indefinite Integral\>\"", "}"}]}], ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}],
+      "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7601986084100323`*^9, 3.7601986102539697`*^9}, {
+  3.760198931696558*^9, 
+  3.760199036709054*^9}},ExpressionUUID->"eab4a4fe-fb20-45b8-9a32-\
+a60a9d495628"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "x'", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Indefinite Integral"}, 
+    PodStates -> {"Step-by-step solution", "Show all steps"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, 
+   Typeset`initdone$$ = True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "0", "datatypes" -> 
+    "", "timedout" -> "", "timedoutpods" -> "", "timing" -> "0.421", 
+    "parsetiming" -> "0.139", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa11091085f3601814g9eh00001138466hbgg3hb66", "host" -> 
+    "http://www4f.wolframalpha.com", "server" -> "20", "related" -> 
+    "http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa11101085f3601814g9eh00002ega0ai1ab9hac808721574333419194601", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 20, 43, 57.8314021`9.514738555423929}, "Line" -> 
+    11, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "x'"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {}, {}, Typeset`chosen$$, Typeset`open$$, Typeset`elements$$, 
+        Typeset`q$$, Typeset`opts$$, Typeset`nonpods$$, Typeset`queryinfo$$, 
+        Typeset`sessioninfo$$, Typeset`showpods$$, Typeset`failedpods$$, 
+        Typeset`newq$$}]], StandardForm],
+    ImageSizeCache->{1345., {94., 106.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.760198966826329*^9, 
+  3.7601990378523903`*^9}},ExpressionUUID->"6388ac86-94a8-483a-afeb-\
+4bf1023f0503"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<e^2 x cos(3x)\>\"", ",", 
+   RowBox[{"IncludePods", "\[Rule]", 
+    RowBox[{"{", "\"\<Indefinite Integral\>\"", "}"}]}], ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}],
+      "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.760199017411168*^9, 
+  3.7601990174131575`*^9}},ExpressionUUID->"13960b03-8dc6-4ca6-b134-\
+42ea3d48c563"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "e^2 x cos(3x)", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Indefinite Integral"}, 
+    PodStates -> {"Step-by-step solution", "Show all steps"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Indefinite integrals", "scanner" -> "Integral", "id" -> 
+     "IndefiniteIntegral", "position" -> "100", "error" -> "false", 
+     "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["minput", {}, {"Integrate[E^2 x Cos[3 x], x]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              TagBox[
+               RowBox[{"\[Integral]", 
+                 RowBox[{
+                   RowBox[{
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], 
+                   RowBox[{"\[DifferentialD]", "x"}]}]}], HoldForm], 
+              "\[LongEqual]", 
+              TagBox[
+               StyleBox[
+                RowBox[{
+                  StyleBox[
+                   RowBox[{
+                    FractionBox["1", "9"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "+", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], ")"}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}, StripOnInput -> False], "+", 
+                  StyleBox[
+                  "\"constant\"", {
+                   Magnification -> 0.9 Inherited, FontFamily -> "Helvetica", 
+                    FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], {
+                 GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                 LineIndent -> 0}, StripOnInput -> False], Identity]}], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "Possible intermediate steps"}, {
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Take the integral:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "x"}]}]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{None}}, "Rows" -> {{0.5}}}], "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{"\"Factor \"", "\"out \"", "\"constants:\""},
+                     "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", "2"], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"x", " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "x"}]}]}]}]}, "RowDefault"]}},
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{"x", " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "\",\"", "\" \""}, 
+                    "RowDefault"], "\"integrate \"", "\"by \"", "\"parts, \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"f", 
+                    RowBox[{"\[DifferentialD]", "g"}]}]}], "\[LongEqual]", 
+                    RowBox[{
+                    RowBox[{"f", " ", "g"}], "-", 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{"g", 
+                    RowBox[{"\[DifferentialD]", "f"}]}]}]}]}], "\",\"", 
+                    "\" \""}, "RowDefault"], "\"where \"", "\"\\n \"", 
+                    TemplateBox[{
+                    RowBox[{"f", "\[LongEqual]", "x"}], "\",\"", "\" \"", 
+                    "\" \"", "\" \"", "\" \""}, "RowDefault"], 
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "g"}], "\[LongEqual]", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "\"\[ThinSpace]\""}, 
+                    "RowDefault"], 
+                    RowBox[{"\[DifferentialD]", "x"}], "\",\"", "\"\\n\"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "f"}], "\[LongEqual]", 
+                    "\"\""}], "\"\[ThinSpace]\""}, "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"\[DifferentialD]", "x"}]}, "RowDefault"], 
+                    "\",\"", "\" \"", "\" \"", "\" \"", "\" \"", "\" \""}, 
+                    "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"g", "\[LongEqual]", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}]}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["\[ExponentialE]", "2"], "3"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}], 
+                    RowBox[{"\[DifferentialD]", "x"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"For \"", "\"the \"", "\"integrand \"", 
+                    TemplateBox[{
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}], "\",\"", "\" \""}, 
+                    "RowDefault"], "\"substitute \"", 
+                    TemplateBox[{
+                    RowBox[{"u", "\[LongEqual]", 
+                    RowBox[{"3", " ", "x"}]}], "\" \""}, "RowDefault"], 
+                    "\"and \"", 
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"\[DifferentialD]", "u"}], "\[LongEqual]", "3"}], 
+                    "\"\[ThinSpace]\""}, "RowDefault"], 
+                    TemplateBox[{
+                    RowBox[{"\[DifferentialD]", "x"}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "-", 
+                    RowBox[{
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox["\[ExponentialE]", "2"], "9"]}], 
+                    RowBox[{"\[Integral]", 
+                    RowBox[{
+                    RowBox[{"sin", "(", "u", ")"}], 
+                    RowBox[{"\[DifferentialD]", "u"}]}]}]}]}]}, 
+                    "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"integral \"", "\"of \"", 
+                    TemplateBox[{
+                    RowBox[{"sin", "(", "u", ")"}], "\" \""}, "RowDefault"], 
+                    "\"is \"", 
+                    TemplateBox[{
+                    RowBox[{"-", 
+                    RowBox[{"cos", "(", "u", ")"}]}], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "9"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", 
+                    RowBox[{"cos", "(", "u", ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}, StripOnInput -> False], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", "\"back \"", "\"for \"", 
+                    TemplateBox[{
+                    RowBox[{"u", "\[LongEqual]", 
+                    RowBox[{"3", " ", "x"}]}], "\":\""}, "RowDefault"]}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    RowBox[{
+                    FractionBox["1", "3"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "+", 
+                    RowBox[{
+                    FractionBox["1", "9"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}, StripOnInput -> False], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, "RowDefault"]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Which \"", "\"is \"", "\"equal \"", "\"to:\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    FrameBox[
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    TemplateBox[{"\"Answer:\""}, "RowDefault"], FontFamily -> 
+                    "Helvetica", FontSize -> 12, StripOnInput -> False], 
+                    "\[SpanFromLeft]"}, {"\"\"", 
+                    TemplateBox[{"\" \"", "\"\[LongEqual] \"", 
+                    StyleBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    FractionBox["1", "9"], " ", 
+                    SuperscriptBox["\[ExponentialE]", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"3", " ", "x", " ", 
+                    RowBox[{"sin", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], "+", 
+                    RowBox[{"cos", "(", 
+                    RowBox[{"3", " ", "x"}], ")"}]}], ")"}]}], {
+                    GrayLevel[0], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                     LineIndent -> 0}, StripOnInput -> False], "+", 
+                    StyleBox[
+                    "\"constant\"", {
+                    Magnification -> 0.9 Inherited, FontFamily -> "Helvetica",
+                     FontSize -> Inherited, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}], {
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, "RowDefault"]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {2.5, Automatic}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {2, 0, 3}, "Rows" -> {1.5, 1, 2}}, 
+                    AllowScriptLevelChange -> False], "Grid"], FrameStyle -> {
+                    AbsoluteThickness[1], 
+                    RGBColor[0.52, 0.76, 0.86]}, Background -> 
+                    RGBColor[0.91, 0.98, 1], RoundingRadius -> 3, 
+                    FrameMargins -> 12, StripOnInput -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+              AllowScriptLevelChange -> False, DefaultBaseStyle -> "Column", 
+              GridBoxDividers -> {
+               "Columns" -> {{False}}, "Rows" -> {False, {True}, False}}, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{3}}}, FrameStyle -> 
+              GrayLevel[0.7]], "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["states", {"count" -> "2"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Approximate form", "input" -> 
+         "IndefiniteIntegral__Approximate form"}, {}], 
+       XMLElement[
+       "state", {
+        "name" -> "Hide steps", "input" -> 
+         "IndefiniteIntegral__Hide steps"}, {}]}]}], Typeset`aux1$$ = {
+   True, False, {False, False}, True}, Typeset`asyncpods$$ = {}, 
+   Typeset`nonpods$$ = {
+    XMLElement["assumptions", {"count" -> "1"}, {
+      XMLElement[
+      "assumption", {
+       "type" -> "ListOrTimes", "template" -> 
+        "Assuming ${desc1}. Use ${desc2} instead", "count" -> "2"}, {
+        XMLElement[
+        "value", {
+         "name" -> "Times", "desc" -> "multiplication", "input" -> 
+          "ListOrTimes_Times"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "List", "desc" -> "a list", "input" -> 
+          "ListOrTimes_List"}, {}]}]}]}, Typeset`initdone$$ = True, 
+   Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "Math", "timedout" -> "", "timedoutpods" -> "", "timing" -> "1.733", 
+    "parsetiming" -> "0.467", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa15111be3ad7ihgff2d5500000i8fb1gaabg596ch", "host" -> 
+    "http://www4f.wolframalpha.com", "server" -> "55", "related" -> 
+    "http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa15121be3ad7ihgff2d55000014ec7bah916a19938707379056943765232", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 20, 43, 40.0976221`9.355693498577477}, "Line" -> 
+    9, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "e^2 x cos(3x)"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{1345., {940., 952.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.7601990203054943`*^9},ExpressionUUID->"dd1b9115-6b93-4a34-9b02-\
+137e49f107f9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WolframAlpha", "[", 
+   RowBox[{"\"\<y''(t)==-y'(t)*((a+B*q)/m)\>\"", ",", 
+    RowBox[{"IncludePods", "\[Rule]", 
+     RowBox[{"{", "\"\<Differential equation solution\>\"", "}"}]}], ",", 
+    RowBox[{"PodStates", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}], 
+      "}"}]}]}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.7601990567924614`*^9, 
+  3.760199083907852*^9}},ExpressionUUID->"7c668751-f39f-4019-9145-\
+fac8d053d5d4"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "y''(t)==-y'(t)*((a+B*q)/m)", 
+   Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Differential equation solution"}, 
+    PodStates -> {"Step-by-step solution", "Show all steps"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Differential equation solutions", "scanner" -> "ODE", 
+     "id" -> "DifferentialEquationSolution", "position" -> "100", "error" -> 
+     "false", "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {"DSolve[{y''[t] == -(((a + B q) y'[t])/m)}, y[t], t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"y", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                FractionBox[
+                 RowBox[{
+                   SubscriptBox["c", "1"], " ", "m", " ", 
+                   SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"a", "+", 
+                    RowBox[{"B", " ", "q"}]}], ")"}]}], ")"}], "/", 
+                    "m"}]}]]}], 
+                 RowBox[{"a", "+", 
+                   RowBox[{"B", " ", "q"}]}]], "+", 
+                SubscriptBox["c", "2"]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "Possible intermediate steps"}, {
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                StyleBox[
+                 StyleBox[
+                  TemplateBox[{"\[NoBreak]", "\"\[NoBreak]\"", 
+                    TemplateBox[{
+                    TemplateBox[{"\"Solve \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    TagBox[
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], 
+                    RowBox[{"y", "(", "t", ")"}]}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    HoldForm], "\[LongEqual]", 
+                    RowBox[{"-", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{"a", "+", 
+                    RowBox[{"B", " ", "q"}]}], HoldForm], ")"}], " ", 
+                    TagBox[
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", 
+                    RowBox[{"y", "(", "t", ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], HoldForm]}], "m"]}]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt[
+                    $CellContext`y[$CellContext`t], {$CellContext`t, 
+                    2}]] == -$CellContext`m^(-1) 
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt[
+                    $CellContext`y[$CellContext`t], $CellContext`t]] 
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[$CellContext`a, $CellContext`B $CellContext`q]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"]}, 
+                    "RowDefault"]}, "RowDefault"], "\":\""}, 
+                   "RowWithSeparators"], 
+                  GrayLevel[0.5], StripOnInput -> False], {
+                 LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                  LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                  0}, StripOnInput -> False]}, {
+                TagBox[
+                 GridBox[{{
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Assume \"", "\"a \"", "\"solution \"", "\"will \"", 
+                    "\"be \"", "\"proportional \"", "\"to \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\" \""}, 
+                    "RowDefault"], "\"for \"", "\"some \"", "\"constant \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\".\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{"y", "(", "t", ")"}], TraditionalForm]]], 
+                    ExpressionCell[
+                    $CellContext`y[$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"], 
+                    "\" \""}, "RowDefault"], "\"into \"", "\"the \"", 
+                    "\"differential \"", "\"equation:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{0.5}}}], 
+                    "Column"]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], "\"\""}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], "+", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{"a", "+", 
+                    RowBox[{"B", " ", "q"}]}], HoldForm], ")"}], " ", 
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", "\"\""}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm]}], 
+                    "m"]}], HoldForm], "\" \""}, "RowDefault"], 
+                    "\"\[LongEqual] \"", "0"}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], "\"\""}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt["", {$CellContext`t, 2}][
+                    E^($CellContext`\[Lambda] $CellContext`t)]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) $CellContext`\
+\[Lambda]^2]], FontColor -> GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    StyleBox[
+                    "\" and \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+                    False], TraditionalForm]]], 
+                    ExpressionCell[
+                    Style[" and ", FontColor -> GrayLevel[0.5]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", "\"\""}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt["", $CellContext`t][
+                    E^($CellContext`\[Lambda] $CellContext`t)]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{"\[Lambda]", " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) $CellContext`\
+\[Lambda]]], FontColor -> GrayLevel[0], StripOnInput -> False]}, 
+                    "RowDefault"], "\":\""}, "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], "+", 
+                    RowBox[{"\[Lambda]", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    FractionBox["a", "m"], "+", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm], ")"}], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}]}], HoldForm], "\" \""},
+                     "RowDefault"], "\"\[LongEqual] \"", "0"}, "RowDefault"], 
+                    HoldForm]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Factor \"", "\"out \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], "+", 
+                    FractionBox[
+                    RowBox[{"a", " ", "\[Lambda]"}], "m"], "+", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q", " ", "\[Lambda]"}], "m"]}], 
+                    HoldForm], ")"}], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], "\" \""}, 
+                    "RowDefault"], "\"\[LongEqual] \"", "0"}, "RowDefault"], 
+                    HoldForm]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TemplateBox[{"\"Since \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], "\[NotEqual]", "0"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) != 0]], 
+                    FontColor -> GrayLevel[0], StripOnInput -> False], 
+                    "\" \""}, "RowDefault"], "\"for \"", "\"any \"", 
+                    "\"finite \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"]}, 
+                    "RowDefault"], "\",\"", "\" \""}, "RowDefault"], 
+                    "\"the \"", "\"zeros \"", "\"must \"", "\"come \"", 
+                    "\"from \"", "\"the \"", "\"polynomial:\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], "+", 
+                    FractionBox[
+                    RowBox[{"a", " ", "\[Lambda]"}], "m"], "+", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q", " ", "\[Lambda]"}], "m"]}], 
+                    HoldForm], "\" \""}, "RowDefault"], "\"\[LongEqual] \"", 
+                    "0"}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Factor:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[Lambda]", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{"a", "+", 
+                    RowBox[{"B", " ", "q"}], "+", 
+                    RowBox[{"m", " ", "\[Lambda]"}]}], HoldForm], ")"}]}], 
+                    "m"], "\[LongEqual]", "0"}]}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Solve \"", "\"for \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{"\[Lambda]", "\[LongEqual]", "0"}], 
+                    StyleBox[
+                    "\" or \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+                    False], 
+                    RowBox[{"\[Lambda]", "\[LongEqual]", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["a", "m"]}], "-", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm]}]}, 
+                    "RowDefault"]}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"root \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["0", TraditionalForm]]], 
+                    ExpressionCell[0]], FontColor -> GrayLevel[0], 
+                    StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"gives \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["y", "1"], "(", "t", ")"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`y, 1][$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "1"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 1]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"as \"", "\"a \"", "\"solution, \"", 
+                    "\"where \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "1"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 1]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False], "\" \""}, "RowDefault"], 
+                    "\"is \"", "\"an \"", "\"arbitrary \"", "\"constant.\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"root \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["a", "m"]}], "-", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[-$CellContext`a/$CellContext`m, -$CellContext`B $CellContext`m^(-1) \
+$CellContext`q]]], FontColor -> GrayLevel[0], StripOnInput -> False]}, 
+                    "RowDefault"], "\" \""}, "RowDefault"], "\"gives \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["y", "2"], "(", "t", ")"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`y, 2][$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["c", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"a", "/", "m"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"B", " ", "q"}], ")"}], "/", "m"}]}], HoldForm], 
+                    ")"}]}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t 
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[-$CellContext`a/$CellContext`m, -$CellContext`B $CellContext`m^(-1) \
+$CellContext`q]) Subscript[$CellContext`c, 2]]], FontColor -> GrayLevel[0], 
+                    StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"as \"", "\"a \"", "\"solution, \"", 
+                    "\"where \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "2"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 2]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False], "\" \""}, "RowDefault"], 
+                    "\"is \"", "\"an \"", "\"arbitrary \"", "\"constant.\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"The \"", "\"general \"", "\"solution \"", "\"is \"", 
+                    "\"the \"", "\"sum \"", "\"of \"", "\"the \"", 
+                    "\"above \"", "\"solutions:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{0.5}}}], 
+                    "Column"]}, {
+                    FrameBox[
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    TemplateBox[{"\"Answer:\""}, "RowDefault"], FontFamily -> 
+                    "Helvetica", FontSize -> 12, StripOnInput -> False], 
+                    "\[SpanFromLeft]"}, {"\"\"", 
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{"y", "(", "t", ")"}], "\" \""}, "RowDefault"], 
+                    "\"\[LongEqual] \"", 
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    RowBox[{
+                    SubscriptBox["y", "1"], "(", "t", ")"}], "+", 
+                    RowBox[{
+                    SubscriptBox["y", "2"], "(", "t", ")"}]}], HoldForm], 
+                    "\" \""}, "RowDefault"], "\"\[LongEqual] \"", 
+                    TagBox[
+                    RowBox[{
+                    SubscriptBox["c", "1"], "+", 
+                    RowBox[{
+                    SubscriptBox["c", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"a", "/", "m"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"B", " ", "q"}], ")"}], "/", "m"}]}], HoldForm], 
+                    ")"}], " ", "t"}]]}]}], HoldForm]}, "RowDefault"], 
+                    HoldForm]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {2.5, Automatic}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {2, 0, 3}, "Rows" -> {1.5, 1, 2}}, 
+                    AllowScriptLevelChange -> False], "Grid"], FrameStyle -> {
+                    AbsoluteThickness[1], 
+                    RGBColor[0.52, 0.76, 0.86]}, Background -> 
+                    RGBColor[0.91, 0.98, 1], RoundingRadius -> 3, 
+                    FrameMargins -> 12, StripOnInput -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+              AllowScriptLevelChange -> False, DefaultBaseStyle -> "Column", 
+              GridBoxDividers -> {
+               "Columns" -> {{False}}, "Rows" -> {False, {True}, False}}, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{3}}}, FrameStyle -> 
+              GrayLevel[0.7]], "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["states", {"count" -> "3"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Approximate form", "input" -> 
+         "DifferentialEquationSolution__Approximate form"}, {}], 
+       XMLElement[
+       "statelist", {
+        "count" -> "3", "value" -> "Solve as a homogeneous linear equation", 
+         "delimiters" -> ""}, {
+         XMLElement[
+         "state", {
+          "name" -> "Solve as a homogeneous linear equation", "input" -> 
+           "DifferentialEquationSolution__Solve as a homogeneous linear \
+equation"}, {}], 
+         XMLElement[
+         "state", {
+          "name" -> "Solve with Laplace transform", "input" -> 
+           "DifferentialEquationSolution__Solve with Laplace transform"}, {}], 
+         XMLElement[
+         "state", {
+          "name" -> "Solve as an autonomous equation", "input" -> 
+           "DifferentialEquationSolution__Solve as an autonomous equation"}, \
+{}]}], 
+       XMLElement[
+       "state", {
+        "name" -> "Hide steps", "input" -> 
+         "DifferentialEquationSolution__Hide steps"}, {}]}]}], 
+   Typeset`aux1$$ = {True, False, {False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, Typeset`initdone$$ = 
+   True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> "", "timedoutpods" -> "", "timing" -> "2.489", 
+    "parsetiming" -> "0.788", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa72012daid236a6967d4000065c16644gia7874f", "host" -> 
+    "http://www4f.wolframalpha.com", "server" -> "27", "related" -> 
+    "http://www4f.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa72112daid236a6967d4000011gd722cc2gahi0d809292914472481620", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 20, 44, 48.2763162`9.436308981406793}, "Line" -> 
+    12, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "y''(t)==-y'(t)*((a+B*q)/m)"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{1345., {1636., 1648.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.7601990884832096`*^9},ExpressionUUID->"c7e0b2dd-9480-4b00-89d9-\
+10a5d8b34c76"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WolframAlpha", "[", 
+   RowBox[{"\"\<x''(t)==(x'(t))*((B*q-a)/m)\>\"", ",", 
+    RowBox[{"IncludePods", "\[Rule]", 
+     RowBox[{"{", "\"\<Differential equation solution\>\"", "}"}]}], ",", 
+    RowBox[{"PodStates", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}], 
+      "}"}]}]}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.7601993197858953`*^9, 
+  3.760199347422963*^9}},ExpressionUUID->"b6590f13-1e3d-46b8-95a8-\
+d2418fbce3e7"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "x''(t)==(x'(t))*((B*q-a)/m)", 
+   Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Differential equation solution"}, 
+    PodStates -> {
+     "Step-by-step solution", "Show all steps", 
+      "DifferentialEquationSolution__Solve as an autonomous equation"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Differential equation solutions", "scanner" -> "ODE", 
+     "id" -> "DifferentialEquationSolution", "position" -> "100", "error" -> 
+     "false", "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {"DSolve[{x''[t] == ((-a + B q) x'[t])/m}, x[t], t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"x", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                FractionBox[
+                 RowBox[{
+                   SubscriptBox["c", "1"], " ", "m", " ", 
+                   SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"-", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"a", "-", 
+                    RowBox[{"B", " ", "q"}]}], ")"}]}], ")"}], "/", 
+                    "m"}]}]]}], 
+                 RowBox[{"a", "-", 
+                   RowBox[{"B", " ", "q"}]}]], "+", 
+                SubscriptBox["c", "2"]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "Possible intermediate steps"}, {
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                StyleBox[
+                 StyleBox[
+                  TemplateBox[{"\[NoBreak]", "\"\[NoBreak]\"", 
+                    TemplateBox[{
+                    TemplateBox[{"\"Solve \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    TagBox[
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], 
+                    RowBox[{"x", "(", "t", ")"}]}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    HoldForm], "\[LongEqual]", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", "a"}], "+", 
+                    RowBox[{"B", " ", "q"}]}], HoldForm], ")"}], " ", 
+                    TagBox[
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", 
+                    RowBox[{"x", "(", "t", ")"}]}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], HoldForm]}], "m"]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt[
+                    $CellContext`x[$CellContext`t], {$CellContext`t, 
+                    2}]] == $CellContext`m^(-1) 
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt[
+                    $CellContext`x[$CellContext`t], $CellContext`t]] 
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[-$CellContext`a, $CellContext`B $CellContext`q]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"]}, 
+                    "RowDefault"]}, "RowDefault"], "\":\""}, 
+                   "RowWithSeparators"], 
+                  GrayLevel[0.5], StripOnInput -> False], {
+                 LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                  LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                  0}, StripOnInput -> False]}, {
+                TagBox[
+                 GridBox[{{
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"Assume \"", "\"a \"", "\"solution \"", "\"will \"", 
+                    "\"be \"", "\"proportional \"", "\"to \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\" \""}, 
+                    "RowDefault"], "\"for \"", "\"some \"", "\"constant \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\".\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{"x", "(", "t", ")"}], TraditionalForm]]], 
+                    ExpressionCell[
+                    $CellContext`x[$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"], 
+                    "\" \""}, "RowDefault"], "\"into \"", "\"the \"", 
+                    "\"differential \"", "\"equation:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{0.5}}}], 
+                    "Column"]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], "\"\""}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], "+", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{"a", "-", 
+                    RowBox[{"B", " ", "q"}]}], HoldForm], ")"}], " ", 
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", "\"\""}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm]}], 
+                    "m"]}], HoldForm], "\" \""}, "RowDefault"], 
+                    "\"\[LongEqual] \"", "0"}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Substitute \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["\[DifferentialD]", "2"], "\"\""}], 
+                    RowBox[{"\[DifferentialD]", 
+                    SuperscriptBox["t", "2"]}], MultilineFunction -> None], 
+                    "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt["", {$CellContext`t, 2}][
+                    E^($CellContext`\[Lambda] $CellContext`t)]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) $CellContext`\
+\[Lambda]^2]], FontColor -> GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    StyleBox[
+                    "\" and \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+                    False], TraditionalForm]]], 
+                    ExpressionCell[
+                    Style[" and ", FontColor -> GrayLevel[0.5]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[DifferentialD]", "\"\""}], 
+                    RowBox[{"\[DifferentialD]", "t"}], MultilineFunction -> 
+                    None], "\[InvisibleApplication]", 
+                    RowBox[{"(", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], ")"}]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`\
+StepByStepMathCommonFunctions`mathWrapper[
+                    Dt["", $CellContext`t][
+                    E^($CellContext`\[Lambda] $CellContext`t)]]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{"\[Lambda]", " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) $CellContext`\
+\[Lambda]]], FontColor -> GrayLevel[0], StripOnInput -> False]}, 
+                    "RowDefault"], "\":\""}, "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], "+", 
+                    RowBox[{"\[Lambda]", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    FractionBox["a", "m"], "-", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm], ")"}], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}]}], HoldForm], "\" \""},
+                     "RowDefault"], "\"\[LongEqual] \"", "0"}, "RowDefault"], 
+                    HoldForm]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Factor \"", "\"out \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda])]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], "+", 
+                    FractionBox[
+                    RowBox[{"a", " ", "\[Lambda]"}], "m"], "-", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q", " ", "\[Lambda]"}], "m"]}], 
+                    HoldForm], ")"}], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]]}], "\" \""}, 
+                    "RowDefault"], "\"\[LongEqual] \"", "0"}, "RowDefault"], 
+                    HoldForm]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TemplateBox[{"\"Since \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"\[Lambda]", " ", "t"}]], "\[NotEqual]", "0"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t $CellContext`\[Lambda]) != 0]], 
+                    FontColor -> GrayLevel[0], StripOnInput -> False], 
+                    "\" \""}, "RowDefault"], "\"for \"", "\"any \"", 
+                    "\"finite \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False]}, "RowDefault"]}, 
+                    "RowDefault"], "\",\"", "\" \""}, "RowDefault"], 
+                    "\"the \"", "\"zeros \"", "\"must \"", "\"come \"", 
+                    "\"from \"", "\"the \"", "\"polynomial:\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    SuperscriptBox["\[Lambda]", "2"], "+", 
+                    FractionBox[
+                    RowBox[{"a", " ", "\[Lambda]"}], "m"], "-", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q", " ", "\[Lambda]"}], "m"]}], 
+                    HoldForm], "\" \""}, "RowDefault"], "\"\[LongEqual] \"", 
+                    "0"}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Factor:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"\[Lambda]", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{"a", "-", 
+                    RowBox[{"B", " ", "q"}], "+", 
+                    RowBox[{"m", " ", "\[Lambda]"}]}], HoldForm], ")"}]}], 
+                    "m"], "\[LongEqual]", "0"}]}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"Solve \"", "\"for \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], "\":\""}, 
+                    "RowDefault"]}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{"\[Lambda]", "\[LongEqual]", "0"}], 
+                    StyleBox[
+                    "\" or \"", FontColor -> GrayLevel[0.5], StripOnInput -> 
+                    False], 
+                    RowBox[{"\[Lambda]", "\[LongEqual]", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["a", "m"]}], "+", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm]}]}, 
+                    "RowDefault"]}, "RowDefault"], HoldForm]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}, {
+                TagBox[
+                 GridBox[{{
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"root \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["0", TraditionalForm]]], 
+                    ExpressionCell[0]], FontColor -> GrayLevel[0], 
+                    StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"gives \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["x", "1"], "(", "t", ")"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`x, 1][$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "1"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 1]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"as \"", "\"a \"", "\"solution, \"", 
+                    "\"where \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "1"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 1]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False], "\" \""}, "RowDefault"], 
+                    "\"is \"", "\"an \"", "\"arbitrary \"", "\"constant.\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    TemplateBox[{"\"The \"", "\"root \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\[Lambda]", TraditionalForm]]], 
+                    ExpressionCell[$CellContext`\[Lambda]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox["a", "m"]}], "+", 
+                    FractionBox[
+                    RowBox[{"B", " ", "q"}], "m"]}], HoldForm], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[-$CellContext`a/$CellContext`m, $CellContext`B $CellContext`m^(-1) \
+$CellContext`q]]], FontColor -> GrayLevel[0], StripOnInput -> False]}, 
+                    "RowDefault"], "\" \""}, "RowDefault"], "\"gives \"", 
+                    TemplateBox[{
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["x", "2"], "(", "t", ")"}], 
+                    TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`x, 2][$CellContext`t]]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox["\" \[LongEqual] \"", TraditionalForm]]], 
+                    ExpressionCell[" \[LongEqual] "]], FontColor -> 
+                    GrayLevel[0], StripOnInput -> False], 
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    RowBox[{
+                    SubscriptBox["c", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"a", "/", "m"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"B", " ", "q"}], ")"}], "/", "m"}]}], HoldForm], 
+                    ")"}]}]]}], TraditionalForm]]], 
+                    ExpressionCell[
+                    E^($CellContext`t 
+                    CalculateScan`StepByStepMath`StepByStepDSolve`Private`\
+MyPlus[-$CellContext`a/$CellContext`m, $CellContext`B $CellContext`m^(-1) \
+$CellContext`q]) Subscript[$CellContext`c, 2]]], FontColor -> GrayLevel[0], 
+                    StripOnInput -> False]}, "RowDefault"], "\" \""}, 
+                    "RowDefault"], "\"as \"", "\"a \"", "\"solution, \"", 
+                    "\"where \"", 
+                    TemplateBox[{
+                    StyleBox[
+                    InterpretationBox[
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    SubscriptBox["c", "2"], TraditionalForm]]], 
+                    ExpressionCell[
+                    Subscript[$CellContext`c, 2]]], FontColor -> GrayLevel[0],
+                     StripOnInput -> False], "\" \""}, "RowDefault"], 
+                    "\"is \"", "\"an \"", "\"arbitrary \"", "\"constant.\""}, 
+                    "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}, {
+                    StyleBox[
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"The \"", "\"general \"", "\"solution \"", "\"is \"", 
+                    "\"the \"", "\"sum \"", "\"of \"", "\"the \"", 
+                    "\"above \"", "\"solutions:\""}, "RowDefault"], 
+                    GrayLevel[0.5], StripOnInput -> False], {
+                    LinebreakAdjustments -> {1, 89, 100, 0, 100}, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}, StripOnInput -> False]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{0.5}}}], 
+                    "Column"]}, {
+                    FrameBox[
+                    TagBox[
+                    GridBox[{{
+                    StyleBox[
+                    TemplateBox[{"\"Answer:\""}, "RowDefault"], FontFamily -> 
+                    "Helvetica", FontSize -> 12, StripOnInput -> False], 
+                    "\[SpanFromLeft]"}, {"\"\"", 
+                    TagBox[
+                    TemplateBox[{
+                    TemplateBox[{
+                    RowBox[{"x", "(", "t", ")"}], "\" \""}, "RowDefault"], 
+                    "\"\[LongEqual] \"", 
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    RowBox[{
+                    SubscriptBox["x", "1"], "(", "t", ")"}], "+", 
+                    RowBox[{
+                    SubscriptBox["x", "2"], "(", "t", ")"}]}], HoldForm], 
+                    "\" \""}, "RowDefault"], "\"\[LongEqual] \"", 
+                    TagBox[
+                    RowBox[{
+                    SubscriptBox["c", "1"], "+", 
+                    RowBox[{
+                    SubscriptBox["c", "2"], " ", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    TagBox[
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"a", "/", "m"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"B", " ", "q"}], ")"}], "/", "m"}]}], HoldForm], 
+                    ")"}], " ", "t"}]]}]}], HoldForm]}, "RowDefault"], 
+                    HoldForm]}}, 
+                    GridBoxAlignment -> {
+                    "Columns" -> {{Left}}, "Rows" -> {{Baseline}}}, 
+                    AutoDelete -> False, 
+                    GridBoxItemSize -> {"Columns" -> {2.5, Automatic}}, 
+                    GridBoxSpacings -> {
+                    "Columns" -> {2, 0, 3}, "Rows" -> {1.5, 1, 2}}, 
+                    AllowScriptLevelChange -> False], "Grid"], FrameStyle -> {
+                    AbsoluteThickness[1], 
+                    RGBColor[0.52, 0.76, 0.86]}, Background -> 
+                    RGBColor[0.91, 0.98, 1], RoundingRadius -> 3, 
+                    FrameMargins -> 12, StripOnInput -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  AllowScriptLevelChange -> False, DefaultBaseStyle -> 
+                  "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 "Column"]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+              AllowScriptLevelChange -> False, DefaultBaseStyle -> "Column", 
+              GridBoxDividers -> {
+               "Columns" -> {{False}}, "Rows" -> {False, {True}, False}}, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{3}}}, FrameStyle -> 
+              GrayLevel[0.7]], "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["states", {"count" -> "3"}, {
+       XMLElement[
+       "state", {
+        "name" -> "Approximate form", "input" -> 
+         "DifferentialEquationSolution__Approximate form"}, {}], 
+       XMLElement[
+       "statelist", {
+        "count" -> "3", "value" -> "Solve as a homogeneous linear equation", 
+         "delimiters" -> ""}, {
+         XMLElement[
+         "state", {
+          "name" -> "Solve as a homogeneous linear equation", "input" -> 
+           "DifferentialEquationSolution__Solve as a homogeneous linear \
+equation"}, {}], 
+         XMLElement[
+         "state", {
+          "name" -> "Solve with Laplace transform", "input" -> 
+           "DifferentialEquationSolution__Solve with Laplace transform"}, {}], 
+         XMLElement[
+         "state", {
+          "name" -> "Solve as an autonomous equation", "input" -> 
+           "DifferentialEquationSolution__Solve as an autonomous equation"}, \
+{}]}], 
+       XMLElement[
+       "state", {
+        "name" -> "Hide steps", "input" -> 
+         "DifferentialEquationSolution__Hide steps"}, {}]}]}], 
+   Typeset`aux1$$ = {True, False, {False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, Typeset`initdone$$ = 
+   True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> "", "timedoutpods" -> "", "timing" -> "2.724", 
+    "parsetiming" -> "0.977", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa125818hbaafa76dae5fh000018e6dc23025d293e", "host" -> 
+    "http://www4b.wolframalpha.com", "server" -> "18", "related" -> 
+    "http://www4b.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa125918hbaafa76dae5fh00003f63d3cg8760gaa93809469492706707581", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 20, 49, 11.043889`8.795696992136145}, "Line" -> 
+    14, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "x''(t)==(x'(t))*((B*q-a)/m)"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{1345., {1636., 1648.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.760199338343196*^9, 
+  3.760199351067876*^9}},ExpressionUUID->"347e6853-60d8-43d0-8c32-\
+2cc25b974db8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)\>\"", ",", 
+   RowBox[{"IncludePods", "\[Rule]", 
+    RowBox[{"{", "\"\<Differential equation solution\>\"", "}"}]}], ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}],
+      "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.760203096706629*^9, 3.76020319771742*^9}, {
+  3.760203262422119*^9, 3.7602032629788084`*^9}, {3.7602035661151047`*^9, 
+  3.7602035662830095`*^9}},ExpressionUUID->"eaeb00d0-75f4-4a87-9d85-\
+752f0aa8b4a5"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = 
+   "m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Differential equation solution"}, 
+    PodStates -> {"Step-by-step solution", "Show all steps"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Differential equation solutions", "scanner" -> "ODE", 
+     "id" -> "DifferentialEquationSolution", "position" -> "100", "error" -> 
+     "false", "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "minput", {}, {
+        "DSolve[{m x'[t] == -(k x[t]) + B q y[t], m y'[t] == B q x[t] - k \
+y[t]}, {x[t], y[t]}, t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"x", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "1"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]]}], ")"}]}], "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "2"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]]}]}], 
+                    ")"}]}]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "minput", {}, {
+        "DSolve[{m x'[t] == -(k x[t]) + B q y[t], m y'[t] == B q x[t] - k \
+y[t]}, {x[t], y[t]}, t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"y", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "1"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]]}]}], ")"}]}],
+                 "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "2"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]]}], ")"}]}]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+]}], Typeset`aux1$$ = {True, False, {False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, Typeset`initdone$$ = 
+   True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> "", "timedoutpods" -> "", "timing" -> "3.033", 
+    "parsetiming" -> "1.883", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa712170260g1e4a1fec40000604idicf8a48i08a", "host" -> 
+    "http://www4c.wolframalpha.com", "server" -> "23", "related" -> 
+    "http://www4c.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa713170260g1e4a1fec40000643g7ca43aadff2f7586355370270816603", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 21, 59, 30.4526048`9.236199353790106}, "Line" -> 
+    18, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{1345., {145., 157.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.760203156398224*^9, 3.760203201831041*^9, 
+  3.7602032673063173`*^9, 
+  3.7602035704635983`*^9},ExpressionUUID->"04711302-e745-4c63-b42c-\
+80179a9c67ac"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WolframAlpha", "[", 
+  RowBox[{"\"\<m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)+v\>\"", ",", 
+   RowBox[{"IncludePods", "\[Rule]", 
+    RowBox[{"{", "\"\<Differential equation solution\>\"", "}"}]}], ",", 
+   RowBox[{"PodStates", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Step-by-step solution\>\"", ",", "\"\<Show all steps\>\""}],
+      "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.760203787794343*^9, 
+  3.760203789820183*^9}},ExpressionUUID->"3e7aa1bf-eb23-4bb2-b39a-\
+e032eeb773a3"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = 
+   "m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)+v", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, IncludePods -> {"Differential equation solution"}, 
+    PodStates -> {"Step-by-step solution", "Show all steps"}}, 
+   Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Differential equation solutions", "scanner" -> "ODE", 
+     "id" -> "DifferentialEquationSolution", "position" -> "100", "error" -> 
+     "false", "numsubpods" -> "2", "primary" -> "true"}, {
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "minput", {}, {
+        "DSolve[{m x'[t] == -(k x[t]) + B q y[t], m y'[t] == v + B q x[t] - k \
+y[t]}, {x[t], y[t]}, t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"x", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                FractionBox[
+                 RowBox[{"B", " ", "q", " ", "v"}], 
+                 RowBox[{
+                   SuperscriptBox["k", "2"], "-", 
+                   RowBox[{
+                    SuperscriptBox["B", "2"], " ", 
+                    SuperscriptBox["q", "2"]}]}]], "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "1"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]]}], ")"}]}], "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "2"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]]}]}], 
+                    ")"}]}]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+], 
+     XMLElement["subpod", {"title" -> "", "primary" -> "true"}, {
+       XMLElement[
+       "minput", {}, {
+        "DSolve[{m x'[t] == -(k x[t]) + B q y[t], m y'[t] == v + B q x[t] - k \
+y[t]}, {x[t], y[t]}, t]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            RowBox[{
+              RowBox[{"y", "(", "t", ")"}], "\[LongEqual]", 
+              RowBox[{
+                FractionBox[
+                 RowBox[{"k", " ", "v"}], 
+                 RowBox[{
+                   SuperscriptBox["k", "2"], "-", 
+                   RowBox[{
+                    SuperscriptBox["B", "2"], " ", 
+                    SuperscriptBox["q", "2"]}]}]], "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "1"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]], "-", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]]}]}], ")"}]}],
+                 "+", 
+                RowBox[{
+                  FractionBox["1", "2"], " ", 
+                  SubscriptBox["c", "2"], " ", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"B", " ", "q"}]}], "-", 
+                    RowBox[{"k"}]}], ")"}]}], ")"}], "/", "m"}]], "+", 
+                    SuperscriptBox["\[ExponentialE]", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"t", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+                    "m"}]]}], ")"}]}]}]}], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,moutput,computabledata,formatteddata,formuladata"}]}\
+]}], Typeset`aux1$$ = {True, False, {False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {}, Typeset`initdone$$ = 
+   True, Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> "false", "numpods" -> "1", "datatypes" -> 
+    "", "timedout" -> "", "timedoutpods" -> "", "timing" -> "3.366", 
+    "parsetiming" -> "1.903", "parsetimedout" -> "false", "recalculate" -> "",
+     "id" -> "MSPa30051a529c3gafif10ef00004d3ff02i991chd0i", "host" -> 
+    "http://www4c.wolframalpha.com", "server" -> "31", "related" -> 
+    "http://www4c.wolframalpha.com/api/v2/relatedQueries.jsp?id=\
+MSPa30061a529c3gafif10ef000036295a7c78788eac6777138041576913757", "version" -> 
+    "2.6"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 1., 
+    "Date" -> {2019, 2, 26, 22, 3, 14.1326935`8.902799891358733}, "Line" -> 
+    19, "SessionID" -> 20215973123674069322}, Typeset`showpods$$ = {1}, 
+   Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, Typeset`open$$ = False, 
+   Typeset`newq$$ = "m*x'(t)==B*q*y(t)-k*x(t),m*y'(t)==B*q*x(t)-k*y(t)+v"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$}, {Typeset`aux1$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{1345., {154., 166.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     Not[Typeset`initdone$$], Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{Typeset`pod1$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = True],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.7602037941936426`*^9},ExpressionUUID->"1ae26c74-ac0e-4026-a797-\
+0554afe6b20f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"B", " ", "q", " ", "v"}], 
+      RowBox[{
+       SuperscriptBox["k", "2"], "-", 
+       RowBox[{
+        SuperscriptBox["B", "2"], " ", 
+        SuperscriptBox["q", "2"]}]}]], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      SubscriptBox["c", "1"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"B", " ", "q"}]}], "-", "k"}], ")"}]}], ")"}], "/", 
+          "m"}]], "+", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+          "m"}]]}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      SubscriptBox["c", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"B", " ", "q"}], "-", "k"}], ")"}]}], ")"}], "/", 
+          "m"}]], "-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"t", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"B", " ", "q"}]}], "-", "k"}], ")"}]}], ")"}], "/", 
+          "m"}]]}], ")"}]}]}], ",", "t"}], "]"}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.760204453163924*^9, 
+  3.7602044569977274`*^9}},ExpressionUUID->"413b2d6d-8544-4a14-b634-\
+a0c43571aaba"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "-", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "k"}], "-", 
+         RowBox[{"B", " ", "q"}]}], ")"}]}], "m"], "+", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "+", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "k"}], "+", 
+         RowBox[{"B", " ", "q"}]}], ")"}]}], "m"]}], ")"}], " ", 
+   SubscriptBox["c", "1"]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "k"}], "-", 
+             RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "k"}], "-", 
+          RowBox[{"B", " ", "q"}]}], ")"}]}], "m"]}], "+", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "+", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "k"}], "+", 
+         RowBox[{"B", " ", "q"}]}], ")"}]}], "m"]}], ")"}], " ", 
+   SubscriptBox["c", "2"]}]}]], "Output",
+ CellChangeTimes->{
+  3.7602044753981094`*^9},ExpressionUUID->"2acae3ff-2036-4722-9a53-\
+1142f8dccd3a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"%", ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.760204485868075*^9, 
+  3.7602044882207236`*^9}},ExpressionUUID->"34938f24-9749-4645-805a-\
+5b67222c18cf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "-", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "k"}], "-", 
+          RowBox[{"B", " ", "q"}]}], ")"}], "2"]}], 
+      SuperscriptBox["m", "2"]], "+", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "+", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "k"}], "+", 
+          RowBox[{"B", " ", "q"}]}], ")"}], "2"]}], 
+      SuperscriptBox["m", "2"]]}], ")"}], " ", 
+   SubscriptBox["c", "1"]}], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "k"}], "-", 
+             RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "k"}], "-", 
+           RowBox[{"B", " ", "q"}]}], ")"}], "2"]}], 
+       SuperscriptBox["m", "2"]]}], "+", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "k"}], "+", 
+            RowBox[{"B", " ", "q"}]}], ")"}], " ", "t"}], "m"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "k"}], "+", 
+          RowBox[{"B", " ", "q"}]}], ")"}], "2"]}], 
+      SuperscriptBox["m", "2"]]}], ")"}], " ", 
+   SubscriptBox["c", "2"]}]}]], "Output",
+ CellChangeTimes->{
+  3.760204488631482*^9},ExpressionUUID->"5b286dbe-6e94-40ba-84db-\
+782a80bc94d3"]
+}, Open  ]]
+},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 657, 18, 97, "Input", "ExpressionUUID" -> \
+"6ef0b74f-0d77-483d-be5f-c7971cf01e11"],
+Cell[1240, 42, 443, 14, 96, "Output", "ExpressionUUID" -> \
+"402c2675-11ba-41d4-8a27-1dd04444041e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1720, 61, 521, 12, 101, "Input", "ExpressionUUID" -> \
+"eab4a4fe-fb20-45b8-9a32-a60a9d495628"],
+Cell[2244, 75, 2404, 46, 257, "Output", "ExpressionUUID" -> \
+"6388ac86-94a8-483a-afeb-4bf1023f0503"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4685, 126, 481, 11, 101, "Input", "ExpressionUUID" -> \
+"13960b03-8dc6-4ca6-b134-42ea3d48c563"],
+Cell[5169, 139, 24543, 495, 1924, "Output", "ExpressionUUID" -> \
+"dd1b9115-6b93-4a34-9b02-137e49f107f9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29749, 639, 538, 13, 140, "Input", "ExpressionUUID" -> \
+"7c668751-f39f-4019-9145-fac8d053d5d4"],
+Cell[30290, 654, 41132, 877, 3341, "Output", "ExpressionUUID" -> \
+"c7e0b2dd-9480-4b00-89d9-10a5d8b34c76"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71459, 1536, 539, 13, 140, "Input", "ExpressionUUID" -> \
+"b6590f13-1e3d-46b8-95a8-d2418fbce3e7"],
+Cell[72001, 1551, 41232, 879, 3341, "Output", "ExpressionUUID" -> \
+"347e6853-60d8-43d0-8c32-2cc25b974db8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[113270, 2435, 626, 12, 140, "Input", "ExpressionUUID" -> \
+"eaeb00d0-75f4-4a87-9d85-752f0aa8b4a5"],
+Cell[113899, 2449, 9919, 215, 359, "Output", "ExpressionUUID" -> \
+"04711302-e745-4c63-b42c-80179a9c67ac"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123855, 2669, 528, 11, 140, "Input", "ExpressionUUID" -> \
+"3e7aa1bf-eb23-4bb2-b39a-e032eeb773a3"],
+Cell[124386, 2682, 10443, 228, 377, "Output", "ExpressionUUID" -> \
+"1ae26c74-ac0e-4026-a797-0554afe6b20f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134866, 2915, 1821, 58, 106, "Input", "ExpressionUUID" -> \
+"413b2d6d-8544-4a14-b634-a0c43571aaba"],
+Cell[136690, 2975, 1990, 67, 156, "Output", "ExpressionUUID" -> \
+"2acae3ff-2036-4722-9a53-1142f8dccd3a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[138717, 3047, 205, 5, 61, "Input", "ExpressionUUID" -> \
+"34938f24-9749-4645-805a-5b67222c18cf"],
+Cell[138925, 3054, 2234, 75, 279, "Output", "ExpressionUUID" -> \
+"5b286dbe-6e94-40ba-84db-782a80bc94d3"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

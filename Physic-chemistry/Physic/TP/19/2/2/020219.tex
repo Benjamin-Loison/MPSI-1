@@ -1,0 +1,150 @@
+\documentclass{scrartcl}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=3cm]{geometry}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle)\quad}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+	\title{\vspace{-2cm}Compte-rendu de travaux pratiques de physique}
+	\subtitle{Impédances d'entrée / de sortie}
+	\author{Benjamin Loison (MPSI 1)}
+	\date{2 février 2019}
+	\maketitle
+
+	\section{Impédance d'entrée d'appareils de mesure}
+
+		\subsection{Voltmètres}
+		
+			Afin de mesurer la résistance interne des différents voltmètre, on branche en série une alimentation, une résistance variable et un des voltmètres en question. On fait varier la tension jusqu'à obtenir une tension aux bornes du voltmètre qui vaut la moitié de celle obtenue avec une résistance nulle.
+			
+			% schéma
+			
+		Lorsque la résistance variable est nulle, la tension de la résistance s'obtient à partir de la tension affichée par le voltmètre et de la formule: $U = R * i$.
+		
+		% schéma
+		
+		Si la résistance variable est non nulle, on a alors en série $R$ et $R'$ les deux résistances, assimilable a un dipôle unique avec $Z = R + R'$ et U = $Z * i$.
+		
+		On cherche à obtenir la moitié de la tension initiale car lorsque l'on a $R' = R$, on a alors $Z = 2R$ et donc $U = 2 R * i$. On obtient alors $\frac{U}{2} = R * i$.\\
+		
+		Expérimentalement, avec $E = 20$ V et $i = 1$ A\\ % sure ? ça paraît gros
+		On avait avec le voltmètre:\\
+		- Metrix, $R' = $ 9 740 k$\Omega$\\
+		- Velleman, $R' = $ 9 720 k$\Omega$\\
+		- PEKLY, $R' = $ 27 k$\Omega$\\
+		Avec les voltmètres respectivement calibrés sur le domaine 20 V, 20 V et 15 V.\\
+		Avec chaque voltmètre on obtient 10 V.
+		
+		\subsection{Oscilloscope}
+		
+			\subsubsection{Vérifier la valeur de $R_0$}
+			
+				On mesure alors la capacité d'un câble coaxial et d'un oscilloscope dont on connait d'après le producteur la résistance et la capacité qui valent respectivement $R_0 = 1$ M$\Omega$ et $C_0 = 20$ pF $\pm$ 3 pF.\\
+				On réalise alors le montage de l'énoncé en utilisant des fils courts et un câble coaxial pour brancher l'oscilloscope au circuit:\\
+				
+				% schéma or cf subject
+				
+				Avec un générateur à basse fréquence (ici 100 Hz), les capacités se comportent comme des interrupteurs ouverts. Ainsi en utilisant la méthode de la question précédente, et en paramétrant le BF à une sinusoïde de 10 V en crête à crête, on obtient une tension de moitié crête à crête lorsque l'on met la résistance variable sur 1 M$\Omega$. Ce qui est la valeur donnée par le fabricant.
+			
+			\subsubsection{Déterminer $\Gamma$}
+			
+				Afin de calculer la valeur de $\Gamma$, on paramètre la fréquence telle que la résistance $R_0$ soit du même ordre de grandeur que la capacité $C = \Gamma * l + C_0$.\\
+				On a:\\
+				$\frac{1}{C\omega} \approx R_0$, or on a $R_0 = 1$ M$\Omega$ = 10$^6$ $\Omega$ et $C_0 = 20 * 10^{-12} \approx 10^{-11}$.\\
+				D'où: $\frac{1}{10^{-11}\omega} \approx 10^6$.\\
+				Donc: $\omega = \frac{10^{11}}{10^6} = 10^5$ Hz.\\
+				On utilise alors une fréquence de 10$^5$ Hz.\\\\
+				
+				On détermine l'impédence complexe $\underline{Z}$ du dipôle équivalent à celui de l'ensemble de l'oscilloscope et du câble coaxial.\\
+				On a: $\frac{1}{\underline{Z}} = C_0jw + \frac{1}{R_0} + \Gamma ljw$.\\
+				Donc: $\underline{Z} = \frac{R_0}{R_0 C_0 jw + R_0 \Gamma ljw + 1} = \frac{R_0}{1 + jw R_0(C_0 + \Gamma l)}$\\
+				On obtient alors par diviseur de tension, avec la tension crête à crête:\\
+				$\underline{U_{oscilloscope}} = \frac{\underline{Z}}{\underline{Z} + R}\underline{U_{BF}}$.\\
+				Donc: $\underline{Z}(\underline{U_{oscilloscope}\underline{U_{BF}}}) = -R\underline{U_{oscilloscope}}$.\\
+				Finalement on trouve $\underline{Z} = \frac{R\underline{U_{oscilloscope}}}{\underline{U_{BF}} - \underline{U_{oscilloscope}}} = \frac{R_0}{1 + jwR_0(C_0 + \Gamma l)}$.\\
+				On obtient alors que $C_0 + \Gamma l = \frac{R_0 - \underline{Z}}{jwR_0\underline{Z}}$.\\
+				Donc: $\Gamma = \frac{R_0 - \underline{Z}}{ljwR_0\underline{Z}} - \frac{C_0}{l}$.\\
+				
+				On obtient alors par application numérique avec une fréquence de 10$^5$ Hz, $\underline{U_{oscilloscope}} =$ 464 mV et $\underline{U_{BF}}$ = 5 V. Donc $\underline{Z} = \frac{10^6 * 0.464}{5 - 0.464} \approx 10^5 \Omega$.\\
+				Et en prenant $l = 0.7$ m, on obtient: $\Gamma = \frac{10^6 - 10^5}{0.7 * 10^5 * 10^6 * 10^5 j} - \frac{2 * 10^{-11}}{0.7} \approx \frac{9}{7j} * 10^{-10} - \frac{2}{7} * 10^{-10}$. Donc $\Gamma \approx 10^{-10}$ F = 100 pF.
+			
+	\section{Impédance de sortie d'un générateur}
+	
+		\subsection{Rappels}
+			
+			On a pour un générateur de Thévenin: $U = E - Ri$, pour un de Norton, on a: $i = \eta - gu = \eta - \frac{U}{R}$
+			
+		\subsection{Mesure des caractéristiques des générateurs de Thévenin et de Norton associés à un dipôle}
+			
+			\subsubsection{Mesure de $r$}
+			
+				On a: $R_{AB} = \frac{R_1 R_2}{R_1 + R_2} = \frac{98.6 * 269}{363.5} \approx 73$ $\Omega$
+			
+			\subsubsection{Mesure de $e_{AB}$}
+			
+				On a: $e_{AB} = E * \frac{R_2}{R_1 + R_2} = 6 * \frac{269}{363.5} \approx 4.39$ V.
+			
+			\subsubsection{Mesure de $\eta_{AB}$}
+			
+				On a: $\eta_{AB} = \frac{E}{R_1 + R_2} = \frac{6}{363.5} \approx 16$ mA.
+			
+			\subsubsection{Comparer avec les valeurs théoriques}
+			
+				On remarque facilement à partir de nos mesures de $R_1$ et $R_2$ que nos valeurs expérimentales sont très proches de celles théoriques.
+			
+			\subsubsection{Application: Mesurer le courant I parcourant la résistance $R$}
+				% On réalise le montage suivant: schéma
+				On obtient avec le multimètre utilisé comme ampèremètre, $i = 14.27$ mA.\\
+				Théoriquement, on a: $i = \frac{E}{R_1} * \frac{\frac{R_1 R_2}{R_1 + R_2}}{R + \frac{R_1 R_2}{R_1 + R_2}} = \frac{E R_2}{R(R_1 + R_2) + R_1 R_2}$.\\
+				AN: $i = \frac{6 * 269}{220(269 + 100.5) + 100.5 * 269} = 14.8$ mA. Ce qui est très proche de notre valeur mesurée: 14.27 mA.\\\\
+			
+		\subsection{Pile}
+			
+				% schéma On réalise le montage suivant: schéma
+				
+				Pour un générateur réel, on peut représneter la tension de celui-ci, notée $u$, par la droite d'équation: $u = e - ri$ avec $e$ la tension générée et $r$ la résistance interne du générateur. On a $i = \eta - \frac{u}{r}$ avec $\eta$ le courant généré.\\
+				En supposant que le générateur débite dans un dipôle d'impédance $Z$, on a alors: $u = e - (r + Z)i$ et $i = \eta - \frac{u}{r + Z}$\\
+				Avec un $Z$ très grand, on peut alors faire l'approximation suivante: $i \approx \eta$ et pour un $Z$ très petit, on peut faire l'approximation $u \approx e$.\\
+			On obtient alors l'intensité $i$ en fonction de $u$ d'une alimentation stabilisée, en considérant la résistance interne égale dans les 2 régimes:\\
+				
+		\begin{tikzpicture}
+			\begin{axis}[
+				xlabel=$u$ (en unité arbitraire (UA)),
+				ylabel=$i$ (en UA),
+				axis lines = left,
+				xtick = \empty,
+				ytick = \empty]
+			\addplot[color = black] coordinates {
+				(0, 1)
+				(0, 0.75)
+				(1, 0.75)
+				(1, 0)
+				(1.25, 0)
+			};
+			\end{axis}
+		\end{tikzpicture}
+			
+			On étudie ensuite le dipôle AB du verso de l'énoncé.\\
+			Avec le générateur $E$ stabilisé à 6 V et 100 mA et avec $R_1$ = 100.45 $\Omega$ et $R_2$ = 269 $\Omega$.\\
+			
+			En considérant l'alimentation comme un fil et en utilisant un voltmètre et un ampèremètre, on mesure: $v_{AB} =$ 93 $\Omega$, $e_{AB} =$ 4.36 V et $\eta_{AB} = 16.4$ mA.\\
+			
+			% explain
+			
+			On a alors les valeurs suivantes:\\
+			
+			\begin{tabular}{|c|c|}
+					\hline $R_C$ (en $\Omega$) & u - e (en V) \\
+					\hline 100 & 0.118\\
+					\hline 80 & 0.14\\
+					\hline 60 & 0.19\\
+					\hline 40 & 0.26\\
+					\hline 20 & 0.43\\
+					\hline
+				\end{tabular}
+			
+\end{document}
