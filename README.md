@@ -1,5 +1,7 @@
 # MPSI 1
 
+For MP* see: https://github.com/Benjamin-Loison/MPX
+
 <!-- My source codes for Python exercises. -->
 
 Prédiction TIPE MNIST:
