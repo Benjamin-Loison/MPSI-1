@@ -2,6 +2,8 @@
 
 TIPE re-recording: https://lemnoslife.com/gtaNxbguPDRVi96jyGEZev
 
+MP* progress: https://github.com/Benjamin-Loison/MPX/tree/master/TIPE
+
 TIPE MNIST Prediction:
 
 <!--![alt text](https://raw.githubusercontent.com/Benjamin-Loison/MPSI-1/master/TIPE/Prediction%20TIPE/example.jpg)-->
